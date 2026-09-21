@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jadikan AI Pembantu Anda | Bahan webinar IPF UTM</title>
+<meta name="description" content="Slaid, prompt, skrip, soalan Q&A dan senarai semak untuk webinar Jadikan AI Pembantu Anda, IPF UTM, 22 September 2026.">
+<style>
+:root{
+  --ink:#172b27;--muted:#56695f;--forest:#153b34;--forest-2:#0e2e28;--mint:#b8ead7;--lime:#ddf3b9;--paper:#f8faf7;--line:#dce6de;--maroon:#8f163f;
+  --surface:#ffffff;--head:#153b34;--th:#eaf4eb;--thc:#1d563d;--code:#132620;--code-ink:#e1e4e8;--accent:#14b88a;--link:#1a6b51;--soft:#eef5ef;--warn-bg:#fbeef2;--shadow:rgba(24,63,40,.07);
+  color-scheme:light dark;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--ink:#e2eee8;--muted:#9db5ab;--paper:#0c1916;--line:#23413a;--surface:#122622;--head:#d3f1e2;--th:#173229;--thc:#b8ead7;--code:#08120f;--link:#7fd8b5;--soft:#142a25;--warn-bg:#2a1620;--shadow:rgba(0,0,0,.35)}
+}
+:root[data-theme="dark"]{--ink:#e2eee8;--muted:#9db5ab;--paper:#0c1916;--line:#23413a;--surface:#122622;--head:#d3f1e2;--th:#173229;--thc:#b8ead7;--code:#08120f;--link:#7fd8b5;--soft:#142a25;--warn-bg:#2a1620;--shadow:rgba(0,0,0,.35)}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(24px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Avenir Next","Segoe UI",Arial,sans-serif;font-size:16px;line-height:1.6}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+h1,h2,h3,h4,h5{margin:0;color:var(--head);font-weight:780;line-height:1.1}
+p{margin:0 0 1em}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+
+.progress{position:fixed;top:0;left:0;right:0;z-index:60;padding-top:env(safe-area-inset-top,0px);pointer-events:none}
+.progress i{display:block;height:4px;width:0;background:var(--accent)}
+
+.site-header{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px;padding:12px clamp(16px,4.3vw,61px);background:var(--surface);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
+.badge{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:var(--maroon);color:#fff;font-size:12.5px;font-weight:800;letter-spacing:.02em}
+.brand-text{font-weight:780;font-size:15px;line-height:1.15;letter-spacing:-.01em}
+.top-nav{display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);font-size:14.5px;font-weight:700}
+.top-nav a{color:var(--ink);text-decoration:none}
+.top-nav a:hover{text-decoration:underline}
+.top-nav .btn-outline{border:1px solid var(--line);padding:11px 18px;border-radius:9px;background:var(--surface)}
+
+.hero{background:var(--forest);color:#fff;padding:clamp(40px,7vw,95px) clamp(20px,5vw,61px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,64px);align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;margin:0 0 26px;padding:7px 14px;border-radius:99px;background:rgba(184,234,215,.1);color:#dff5ea;font-size:13.5px;font-weight:700}
+.pill i{width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(184,234,215,.2)}
+.hero h1{color:#fff;font-size:clamp(40px,6.1vw,68px);letter-spacing:-.055em;line-height:1.02;margin-bottom:26px}
+.lead{max-width:34em;font-size:clamp(16px,1.6vw,19px);line-height:1.6;color:#d4e8df;margin-bottom:34px}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:22px}
+.btn-lime{display:inline-flex;align-items:center;gap:26px;padding:16px 22px;border-radius:9px;background:var(--lime);color:var(--forest);font-weight:780;text-decoration:none}
+.btn-lime:hover{background:#e8f8cc}
+.btn-link{color:#fff;font-weight:700;text-decoration:none;border-bottom:2px solid rgba(255,255,255,.5);padding-bottom:3px}
+.btn-link:hover{border-bottom-color:#fff}
+
+.flow{margin:0;padding:24px;border-radius:26px;border:1px solid rgba(184,234,215,.28);background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02))}
+.flow figcaption{font-size:13.5px;font-weight:700;color:#dff5ea;margin-bottom:24px}
+.flow-grid{display:grid;grid-template-columns:minmax(0,1.25fr) 22px minmax(0,1fr) 22px minmax(0,.8fr);align-items:center}
+.flow-in{display:grid;gap:14px}
+.node{background:#f0faf5;color:var(--forest);border-radius:10px;padding:12px 14px;box-shadow:0 6px 18px rgba(0,0,0,.14)}
+.node b{display:block;font-size:14.5px;line-height:1.2;letter-spacing:-.01em}
+.node small{display:block;margin-top:4px;color:#56695f;font-size:12.5px;line-height:1.3}
+.node.hot{background:var(--lime);border:2px solid #c6e59a;text-align:center;padding:18px 12px}
+.node.hot small{color:#3f5a2b}
+.node.out{background:#fff}
+.node.out .dots{display:block;margin-bottom:8px;height:6px;width:24px;background:radial-gradient(circle,#b9c9c1 2.5px,transparent 3px) 0 0/8px 6px repeat-x}
+.line{height:2px;background:rgba(184,234,215,.5)}
+.flow-foot{margin:22px 0 0;font-size:13px;color:#c6ddd2}
+
+.doc{display:grid;grid-template-columns:250px minmax(0,1fr);gap:clamp(28px,4vw,60px);max-width:1320px;margin:0 auto;padding:clamp(32px,5vw,64px) clamp(16px,4.3vw,61px) 96px}
+.toc{position:sticky;top:calc(24px + env(safe-area-inset-top,0px));align-self:start;max-height:calc(100vh - 48px);overflow:auto;font-size:13.5px;line-height:1.35;padding-right:6px}
+.toc-title{font-size:13px;font-weight:780;color:var(--head);margin:0 0 12px}
+.toc ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+.toc li a{display:block;padding:7px 12px;margin-left:-1px;border-left:2px solid transparent;color:var(--muted);text-decoration:none}
+.toc li a:hover{color:var(--ink)}
+.toc li a.active{color:var(--link);border-left-color:var(--accent);font-weight:700}
+.toc ol ol{border-left:0;margin-left:10px}
+.toc ol ol a{font-size:12.5px;padding:4px 12px}
+.to-top{display:inline-block;margin-top:18px;font-weight:780;font-size:13px;color:var(--link);text-decoration:none}
+
+.content{min-width:0;max-width:980px}
+.content section{margin-bottom:96px}
+.content h2{font-size:clamp(28px,3.6vw,42px);letter-spacing:-.045em;margin-bottom:22px}
+.content h3{font-size:clamp(21px,2.4vw,27px);letter-spacing:-.035em;margin:44px 0 14px}
+.content p,.content li{max-width:70ch}
+.content ul,.content ol{padding-left:1.3em;margin:0 0 1.2em}
+.content li{margin-bottom:.45em}
+.content li::marker{color:var(--accent)}
+.sub{color:var(--muted);font-size:15px}
+
+.callout{margin:24px 0;padding:16px 20px;border-left:4px solid var(--accent);background:var(--soft);border-radius:0 11px 11px 0}
+.callout p:last-child{margin:0}
+.callout.warn{border-left-color:var(--maroon);background:var(--warn-bg)}
+
+.tablewrap{overflow-x:auto;margin:18px 0 26px;border-radius:8px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.7px;background:var(--surface)}
+th{background:var(--th);color:var(--thc);text-align:left;padding:12px 14px;font-weight:780;font-size:14.7px}
+td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.sw{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:8px}
+
+.tl-bar{display:flex;height:46px;border-radius:11px;overflow:hidden;margin:20px 0 6px;box-shadow:0 12px 30px var(--shadow)}
+.tl-seg{display:grid;place-items:center;font-weight:780;font-size:14px;min-width:0}
+.tl-cap{font-size:13px;color:var(--muted);margin:0 0 6px}
+
+.chip{display:inline-block;padding:3px 10px;border-radius:99px;font-size:12.5px;font-weight:780;line-height:1.5;border:1px solid var(--line);color:var(--ink);background:var(--surface)}
+.chip.demo{background:var(--lime);border-color:#c6e59a;color:var(--forest)}
+.chip.tool{background:var(--soft);border-color:var(--line);color:var(--ink)}
+.chip.lain{background:var(--mint);border-color:#9fd8c0;color:var(--forest)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 8px}
+
+.seg-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin:64px 0 0}
+.seg-h small{font-size:14px;font-weight:600;color:var(--muted);letter-spacing:0}
+.slide{padding:34px 0 38px;border-top:1px solid var(--line)}
+.slide-head{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.sn{display:inline-grid;place-items:center;min-width:36px;height:36px;padding:0 8px;border-radius:9px;background:var(--maroon);color:#fff;font-weight:800;font-size:14.5px}
+.slide-head h4{font-size:clamp(18px,2vw,22px);letter-spacing:-.03em}
+.slide-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 20px}
+.wc{font-size:13px;color:var(--muted)}
+.slide-grid{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);gap:clamp(20px,3vw,34px);align-items:start}
+.thumb-col{position:sticky;top:calc(24px + env(safe-area-inset-top,0px))}
+.thumb-wrap{container-type:inline-size}
+.thumb{position:relative;aspect-ratio:16/9;background:var(--forest);color:#fff;border-radius:11px;padding:4cqw 5cqw;display:flex;flex-direction:column;justify-content:center;gap:2cqw;overflow:hidden;box-shadow:0 12px 30px var(--shadow)}
+.thumb .tg{align-self:flex-start;background:var(--lime);color:var(--forest);font-weight:780;font-size:2.6cqw;line-height:1.5;padding:0 2cqw;border-radius:99px}
+.thumb .tt{font-size:4.1cqw;line-height:1.1;font-weight:780;letter-spacing:-.03em;color:#fff}
+.thumb ul{list-style:none;margin:0;padding:0;display:grid;gap:1.2cqw}
+.thumb li{position:relative;padding-left:3.2cqw;margin:0;max-width:none;font-size:2.6cqw;line-height:1.28}
+.thumb li::before{content:"";position:absolute;left:0;top:.6em;width:1.2cqw;height:1.2cqw;border-radius:50%;background:var(--lime)}
+.thumb.cover{justify-content:flex-end;padding-bottom:5cqw}
+.thumb.cover .tt{font-size:6.2cqw;line-height:1.04;letter-spacing:-.045em}
+.thumb.cover ul{gap:.8cqw}
+.thumb.cover li::before{display:none}
+.thumb.cover li{padding-left:0}
+.thumb-note{margin:10px 0 0;font-size:12.5px;color:var(--muted)}
+
+.detail h5{font-size:14px;letter-spacing:-.005em;color:var(--muted);margin:0 0 6px}
+.detail p{max-width:none}
+.detail .blk{margin-bottom:20px}
+.demo-box{margin:6px 0 18px;padding:16px 18px;border-radius:11px;border:1px solid #c6e59a;background:color-mix(in srgb,var(--lime) 34%,var(--surface))}
+.demo-box h5{color:var(--forest)}
+.demo-box ol{margin:0 0 6px;padding-left:1.25em}
+.demo-box li{margin-bottom:.4em}
+.backup{margin:0;padding:12px 16px;border-left:4px solid var(--maroon);background:var(--warn-bg);border-radius:0 9px 9px 0;font-size:14.5px}
+.ref{font-size:14.5px}
+
+.codewrap{position:relative;margin:14px 0}
+.codewrap pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;background:var(--code);color:var(--code-ink);border-radius:11px;padding:46px 22px 22px;font:14.5px/1.75 ui-monospace,SFMono-Regular,Menlo,monospace;box-shadow:0 12px 30px var(--shadow)}
+.codewrap .k{color:var(--mint);font-weight:700}
+.codelabel{position:absolute;left:22px;top:14px;right:120px;font-size:12.5px;font-weight:700;color:#9fc9b8;line-height:1.3}
+.copy{position:absolute;top:10px;right:10px;padding:6px 12px;border-radius:7px;border:1px solid #2e5147;background:#1f3a33;color:#e9fff5;font:700 12.5px/1.2 inherit;font-family:inherit;cursor:pointer}
+.copy:hover{background:#28483f}
+
+.mod .detail{max-width:none}
+.mod .demo-box li{max-width:none}
+.mod .prep{margin:0 0 18px}
+.pgroup{display:flex;align-items:baseline;gap:12px}
+.pblock{margin:0 0 36px}
+.pblock h4{font-size:19px;letter-spacing:-.025em;margin-bottom:2px}
+.pblock .sub{margin:0}
+
+
+.btn-plain{margin-top:10px;padding:10px 16px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:700 14px/1.2 inherit;font-family:inherit;cursor:pointer}
+
+.script{margin:14px 0 8px;padding:22px 24px;border-radius:11px;background:var(--surface);border:1px solid var(--line)}
+.script p{max-width:68ch;line-height:1.8;margin:0}
+.script-meta{font-size:13px;color:var(--muted);margin:0 0 10px}
+
+.qa{border-bottom:1px solid var(--line)}
+.qa summary{cursor:pointer;padding:16px 4px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px;max-width:none}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";font-weight:800;color:var(--accent);font-size:20px;line-height:1}
+.qa[open] summary::after{content:"\2212"}
+.qa p{padding:0 4px 18px;margin:0;max-width:70ch}
+
+.chk-group{margin:0 0 28px;padding:0;border:0}
+.chk-group legend{padding:0;margin-bottom:6px;font-weight:780;font-size:19px;color:var(--head);letter-spacing:-.025em}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line);max-width:72ch;cursor:pointer}
+.chk input{flex:none;width:20px;height:20px;margin-top:2px;accent-color:var(--accent)}
+.chk span{font-size:15.5px;line-height:1.5}
+.chk input:checked+span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--accent)}
+.chk-count{font-size:13px;color:var(--muted);margin:0 0 4px}
+
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;margin:16px 0 24px}
+.swatch{border-radius:11px;overflow:hidden;border:1px solid var(--line);background:var(--surface);font-size:13px}
+.swatch i{display:block;height:54px}
+.swatch b{display:block;padding:8px 10px 0;font-size:13px}
+.swatch span{display:block;padding:0 10px 9px;color:var(--muted);font-family:ui-monospace,Menlo,monospace;font-size:12px}
+
+.site-foot{border-top:1px solid var(--line);padding:26px clamp(16px,4.3vw,61px) 40px;font-size:13.5px;color:var(--muted)}
+
+@media (max-width:1020px){
+  .doc{grid-template-columns:minmax(0,1fr)}
+  .toc{display:none}
+  .hero{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  .top-nav a:not(.btn-outline){display:none}
+  .slide-grid{grid-template-columns:minmax(0,1fr)}
+  .thumb-col{position:static}
+  .flow-grid{grid-template-columns:minmax(0,1fr);gap:0}
+  .flow-grid .line{width:2px;height:16px;margin:0 auto}
+  .content section{margin-bottom:72px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.progress,.toc,.top-nav,.hero-actions,.copy{display:none}.doc{display:block}.slide{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"><i></i></div>
+
+<header class="site-header">
+  <a class="brand" href="#gambaran">
+    <span class="badge">UTM</span>
+    <span class="brand-text">Jadikan AI<br>pembantu anda</span>
+  </a>
+  <nav class="top-nav" aria-label="Navigasi utama">
+    <a href="#ringkasan">Ringkasan</a>
+    <a href="#slaid">Slaid</a>
+    <a href="#demo">Demo</a>
+    <a href="#prompt">Prompt</a>
+    <a href="#skrip">Skrip</a>
+    <a class="btn-outline" href="#persediaan">Senarai semak</a>
+  </nav>
+</header>
+
+<section class="hero" id="gambaran">
+  <div class="hero-copy">
+    <p class="pill"><i></i>Bahan webinar IPF, UTM</p>
+    <h1>Jadikan AI pembantu anda, bukan pengganti anda.</h1>
+    <p class="lead">Bahan lengkap webinar 90 minit pada 22 September 2026: 9 slaid pembuka, sepuluh modul demo langsung merentasi Claude, ChatGPT dan Gemini, dua belas prompt siap salin, skrip, soalan Q&amp;A dan senarai semak persediaan.</p>
+    <div class="hero-actions">
+      <a class="btn-lime" href="#demo">Lihat aturcara demo <span aria-hidden="true">↓</span></a>
+      <a class="btn-link" href="#persediaan">Senarai semak persediaan</a>
+    </div>
+  </div>
+  <figure class="flow">
+    <figcaption>Aliran satu arahan</figcaption>
+    <div class="flow-grid">
+      <div class="flow-in">
+        <div class="node"><b>Peranan dan konteks</b><small>Siapa AI, untuk siapa</small></div>
+        <div class="node"><b>Tugasan</b><small>Satu kata kerja yang jelas</small></div>
+        <div class="node"><b>Format dan kekangan</b><small>Rupa hasil, had, larangan</small></div>
+      </div>
+      <div class="line"></div>
+      <div class="node hot"><b>AI menyediakan draf</b><small>pantas, tetapi boleh tersilap</small></div>
+      <div class="line"></div>
+      <div class="node out"><span class="dots"></span><b>Anda semak</b><small>dan putuskan</small></div>
+    </div>
+    <p class="flow-foot">Draf datang daripada AI. Keputusan datang daripada anda.</p>
+  </figure>
+</section>
+
+<div class="doc">
+  <aside class="toc" aria-label="Isi kandungan">
+    <p class="toc-title">Isi kandungan</p>
+    <ol>
+      <li><a href="#ringkasan">1. Ringkasan dan alur</a></li>
+      <li><a href="#masa">2. Struktur masa 90 minit</a></li>
+      <li><a href="#slaid">3. Slaid pembentangan</a></li>
+      <li><a href="#demo">4. Aturcara demo langsung</a>
+        <ol id="toc-seg"></ol>
+      </li>
+      <li><a href="#prompt">5. Prompt siap guna</a></li>
+      <li><a href="#skrip">6. Skrip pembukaan dan penutup</a></li>
+      <li><a href="#qna">7. Soalan Q&amp;A</a></li>
+      <li><a href="#persediaan">8. Senarai semak persediaan</a></li>
+      <li><a href="#sandaran">9. Pelan sandaran dan PERLU SEMAK</a></li>
+      <li><a href="#reka">10. Garis reka bentuk slaid</a></li>
+    </ol>
+    <a class="to-top" href="#gambaran">Kembali ke atas ↑</a>
+  </aside>
+
+  <main class="content">
+
+    <section id="ringkasan">
+      <h2>1. Ringkasan dan alur persembahan</h2>
+      <p>Webinar anjuran Institusi Pembangunan Felo (IPF), Universiti Teknologi Malaysia, pada Selasa, 22 September 2026, 9.00 hingga 10.30 malam melalui Google Meet. Penceramah: Prof. Madya Dr. Mohd Murtadha bin Mohamad, Jabatan Sains Komputer, Fakulti Komputeran, UTM. Khalayak: warga IPF UTM, campuran pensyarah, felo dan staf pentadbiran, majoriti bukan pengaturcara.</p>
+      <p>Gaya penyampaian: hanya 14 minit pertama ialah slaid. Selebihnya ialah demo langsung yang berterusan. Tiada poll. Semua prompt boleh disalin ke Claude, ChatGPT dan Gemini.</p>
+      <ol>
+        <li>Slaid 14 minit: mesej teras, peta tiga peringkat alat, kerangka lima elemen, peraturan data dan peraturan demo (minit 0 hingga 14).</li>
+        <li>Demo sembang: satu prompt pada Claude, ChatGPT dan Gemini, merentasi kerja akademik, pentadbiran dan penyelidikan, kemudian ujian rujukan palsu (minit 14 hingga 46).</li>
+        <li>Demo ruang kerja ejen: Claude Cowork dan ChatGPT Work pada folder rekaan yang sama, kemudian membina Gem di Gemini (minit 46 hingga 66).</li>
+        <li>Demo ejen pengekodan: Claude Code dan ChatGPT Codex membina laman web peribadi daripada CV rekaan (minit 66 hingga 80).</li>
+        <li>Soal jawab daripada chat dan tiga langkah susulan (minit 80 hingga 90).</li>
+      </ol>
+      <div class="callout">
+        <p><strong>Mesej teras.</strong> AI ialah pembantu yang cekap tetapi tidak boleh dipercayai sepenuhnya. Nilainya bergantung pada cara kita mengarahkan, menyemak dan mengawal data serta akses yang diberikan kepadanya. Pengguna kekal bertanggungjawab ke atas hasil kerja.</p>
+      </div>
+      <h3>Peta alat malam ini</h3>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Peringkat</th><th>Claude</th><th>ChatGPT</th><th>Gemini</th><th>Modul</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Sembang</strong></td><td>Claude</td><td>ChatGPT</td><td>Gemini</td><td>1 hingga 5</td></tr>
+          <tr><td><strong>Ruang kerja</strong></td><td>Claude Cowork</td><td>ChatGPT Work</td><td>Gemini Gem</td><td>6 hingga 8</td></tr>
+          <tr><td><strong>Pengekodan</strong></td><td>Claude Code</td><td>ChatGPT Codex</td><td>Tiada dalam demo</td><td>9 dan 10</td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout warn">
+        <p><strong>Perlu jelas kepada peserta.</strong> Gemini Gem ialah pembantu tersuai dengan arahan tetap dan fail rujukan pilihan. Ia bukan ejen yang bertindak sendiri pada fail anda seperti Claude Cowork atau ChatGPT Work. Ia diletakkan pada peringkat yang sama kerana ia cara paling mudah untuk menyimpan prompt berulang. Ketersediaan, pelan dan ciri semua alat berubah dan ditandakan PERLU SEMAK.</p>
+      </div>
+      <h3>Objektif pembelajaran</h3>
+      <ol>
+        <li>Menulis arahan (prompt) dengan lima elemen, peranan, konteks, tugasan, format dan kekangan, dan menggunakannya pada Claude, ChatGPT dan Gemini.</li>
+        <li>Mengenal pasti tugasan akademik, pentadbiran dan penyelidikan yang sesuai dibantu AI.</li>
+        <li>Membezakan sembang AI, ruang kerja ejen dan alat pengekodan, serta kawalan yang diperlukan bagi setiap satu.</li>
+        <li>Menyemak keluaran AI sebelum digunakan: rujukan yang direka, ringkasan dan kod.</li>
+        <li>Memilih satu tugasan kecil yang berulang untuk dicuba selepas webinar.</li>
+      </ol>
+      <h3>Andaian yang perlu anda sahkan</h3>
+      <ul>
+        <li>Semua demo menggunakan data rekaan atau awam. Folder rekaan dan folder CV disediakan lebih awal.</li>
+        <li>Akaun anda mempunyai akses kepada Claude Cowork, ChatGPT Work, Claude Code dan Codex. Pusat bantuan OpenAI menyatakan ChatGPT Work sedang dilancarkan secara berperingkat, jadi sahkan akses akaun sebelum sesi.</li>
+        <li>Demo ejen dan pengekodan dijalankan pada aplikasi desktop atau terminal, yang perlu dipasang dan diuji lebih awal.</li>
+        <li>Slaid: 9 slaid pembuka dan 1 slaid penutup. Slaid sandaran tersembunyi: B1 hingga B10, satu bagi setiap modul demo.</li>
+        <li>Demo laman web peribadi (modul 9 dan 10) ialah asas kepada panduan web peribadi GitHub yang telah anda terbitkan.</li>
+      </ul>
+    </section>
+
+    <section id="masa">
+      <h2>2. Struktur masa 90 minit</h2>
+      <p>Angka pada bar ialah minit bagi setiap bahagian. Bahagian slaid ringkas supaya sebahagian besar masa digunakan untuk demo langsung.</p>
+      <div class="tl-bar" id="tl-bar" role="img" aria-label="Bar masa 90 minit mengikut bahagian"></div>
+      <p class="tl-cap">Setiap bahagian dipecahkan kepada modul demo dengan masa yang tepat dalam jadual di bawah.</p>
+      <div class="tablewrap"><table id="tl-table"></table></div>
+      <h3>Jadual modul demo</h3>
+      <div class="tablewrap"><table id="mod-table"></table></div>
+    </section>
+
+    <section id="slaid">
+      <h2>3. Slaid pembentangan</h2>
+      <p>Sepuluh slaid sahaja: sembilan pada 14 minit pertama dan satu untuk penutup. Setiap slaid mempunyai tajuk yang menyatakan mesej, maksimum empat poin (kurang 12 perkataan setiap satu), cadangan visual dan nota pembentang 80 hingga 120 perkataan. Pratonton menggunakan saiz teks yang setara dengan 24 pt ke atas pada slaid 16:9.</p>
+      <div id="slide-list"></div>
+    </section>
+
+    <section id="demo">
+      <h2>4. Aturcara demo langsung</h2>
+      <p>Sepuluh modul demo berterusan selepas slaid, ditambah bahagian soal jawab. Setiap modul menyenaraikan alat, persediaan, langkah, data rekaan yang boleh disalin, kata-kata pembentang dan pelan sandaran. Peraturan mudah: jika tiada respons dalam 30 saat, lompat ke slaid sandaran tersembunyi dan teruskan.</p>
+      <div class="legend" aria-label="Petunjuk tanda">
+        <span class="chip demo">DEMO</span><span class="sub">demo langsung</span>
+        <span class="chip tool">Alat</span><span class="sub">alat yang digunakan dalam modul</span>
+      </div>
+      <div id="module-list"></div>
+    </section>
+
+    <section id="prompt">
+      <h2>5. Prompt siap guna</h2>
+      <p>Sembilan prompt asas menggunakan lima elemen dan ruang letak dalam kurungan siku. Semuanya boleh disalin ke Claude, ChatGPT atau Gemini, tetapi hasil dan gaya akan berbeza mengikut alat. Gantikan ruang letak sebelum digunakan dan jangan tampal data sebenar mana-mana individu. Tiga prompt tambahan untuk ejen dan Gem digunakan dalam modul 6 hingga 10.</p>
+      <div id="prompt-list"></div>
+    </section>
+
+    <section id="skrip">
+      <h2>6. Skrip pembukaan dan penutup</h2>
+      <h3>Pembukaan (60 saat, slaid 1)</h3>
+      <div class="script"><p class="script-meta" id="wc-open"></p><p id="script-open"></p></div>
+      <button type="button" class="btn-plain" data-copy-id="script-open">Salin skrip pembukaan</button>
+      <h3>Penutup (60 saat, slaid 10)</h3>
+      <div class="script"><p class="script-meta" id="wc-close"></p><p id="script-close"></p></div>
+      <button type="button" class="btn-plain" data-copy-id="script-close">Salin skrip penutup</button>
+    </section>
+
+    <section id="qna">
+      <h2>7. Sepuluh soalan Q&amp;A yang mungkin ditanya</h2>
+      <p>Jawapan ringkas dan jujur. Perkara yang berubah atau bergantung pada dasar ditandakan PERLU SEMAK.</p>
+      <div id="qa-list"></div>
+    </section>
+
+    <section id="persediaan">
+      <h2>8. Senarai semak persediaan</h2>
+      <p>Webinar ini pada 22 September 2026, jadi senarai sehari sebelum ialah untuk hari ini. Tanda semak disimpan pada pelayar ini sahaja.</p>
+      <div id="checklists"></div>
+    </section>
+
+    <section id="sandaran">
+      <h2>9. Pelan sandaran dan perkara PERLU SEMAK</h2>
+      <h3>Pelan sandaran jika demo atau alat gagal</h3>
+      <p>Setiap modul demo mempunyai satu slaid sandaran tersembunyi (B1 hingga B10). Hasil setiap larian berbeza, jadi tangkapan skrin perlu diambil semasa latihan.</p>
+      <div class="tablewrap"><table id="backup-table"></table></div>
+      <h3>Perkara yang tidak dianggap pasti</h3>
+      <p>Bahan ini tidak mengandungi statistik, kajian, nama ciri produk, had penggunaan, harga atau dasar rasmi yang direka. Perkara di bawah mesti disemak sebelum sesi.</p>
+      <div class="tablewrap"><table id="semak-table"></table></div>
+      <div class="callout warn">
+        <p><strong>Sebelum berkongsi skrin.</strong> Tutup notifikasi, tab peribadi, e-mel dan sebarang API key atau kata laluan. Pastikan aplikasi ejen hanya melihat folder rekaan. Jika ragu, kongsi satu tetingkap sahaja, bukan seluruh skrin.</p>
+      </div>
+    </section>
+
+    <section id="reka">
+      <h2>10. Garis reka bentuk slaid</h2>
+      <p>Garis ini akan digunakan apabila slaid ditukar kepada fail .pptx. Warna dan tipografi mengikut reka bentuk panduan web peribadi supaya bahan konsisten.</p>
+      <div class="swatches" id="swatches"></div>
+      <ul>
+        <li>Saiz 16:9. Tajuk 40 pt tebal, poin 28 pt, label dan nota kaki tidak kurang 24 pt.</li>
+        <li>Latar hijau tua, teks putih, penanda lime. Maroon hanya untuk amaran dan risiko.</li>
+        <li>Satu keluarga fon sahaja: Avenir Next atau Segoe UI, dengan Arial sebagai ganti.</li>
+        <li>Satu mesej bagi satu slaid, maksimum empat poin, setiap poin kurang 12 perkataan.</li>
+        <li>Tiada animasi. Semasa demo, besarkan fon pelayar dan terminal supaya boleh dibaca pada skrin kecil.</li>
+        <li>Slaid sandaran diberi huruf B dan nombor modul (B1 hingga B10) dan ditetapkan sebagai tersembunyi.</li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<footer class="site-foot">
+  <p>Draf untuk semakan. Bahan webinar Institusi Pembangunan Felo (IPF), UTM. Disediakan untuk Assoc. Prof. Dr. Mohd Murtadha bin Mohamad, Fakulti Komputeran, UTM.</p>
+</footer>
+
+<script>
+/*SLIDES_START*/
+const SEGMENTS = [
+  { id: "s0", name: "Slaid pembentangan", from: 0, to: 14, content: "Mesej teras, peta tiga peringkat alat, kerangka lima elemen, peraturan data, peraturan demo", demo: "Slaid 1 hingga 9" },
+  { id: "s1", name: "Demo sembang AI", from: 14, to: 46, content: "Claude, ChatGPT dan Gemini dengan prompt yang sama: asas, akademik, pentadbiran, penyelidikan dan ujian rujukan palsu", demo: "Modul 1 hingga 5" },
+  { id: "s2", name: "Demo ruang kerja ejen", from: 46, to: 66, content: "Claude Cowork dan ChatGPT Work pada folder rekaan yang sama, kemudian membina Gem di Gemini", demo: "Modul 6 hingga 8" },
+  { id: "s3", name: "Demo ejen pengekodan", from: 66, to: 80, content: "Claude Code dan ChatGPT Codex membina laman web peribadi daripada CV rekaan", demo: "Modul 9 dan 10" },
+  { id: "s4", name: "Soal jawab dan penutup", from: 80, to: 90, content: "Soalan daripada chat, tiga langkah susulan dan ucapan penutup", demo: "Soal jawab, slaid 10" }
+];
+
+const SLIDES = [
+  {
+    n: 1, seg: "s0", sec: 60, tag: null,
+    t: "Jadikan AI pembantu anda, bukan pengganti anda",
+    pts: [
+      "Webinar Institusi Pembangunan Felo (IPF), UTM",
+      "Selasa, 22 September 2026, 9.00 hingga 10.30 malam",
+      "Prof. Madya Dr. Mohd Murtadha bin Mohamad",
+      "Jabatan Sains Komputer, Fakulti Komputeran, UTM"
+    ],
+    vis: "Latar hijau tua penuh. Logo penganjur di penjuru atas (guna logo rasmi yang dibekalkan IPF). Tajuk besar putih di kiri, satu ikon pembantu ringkas di kanan. Tiada foto.",
+    note: "Assalamualaikum dan selamat malam semua. Terima kasih kerana hadir selepas seharian bekerja. Saya Murtadha dari Jabatan Sains Komputer. Tajuk malam ini: Jadikan AI Pembantu Anda. Perhatikan perkataannya, pembantu, bukan pengganti. Sesi ini agak berbeza. Saya hanya menggunakan kira-kira empat belas minit pertama untuk slaid, kemudian saya terus menunjukkan secara langsung: tiga alat sembang, tiga ruang kerja ejen dan dua alat pengekodan. Semua data dalam demo ialah rekaan. Kadangkala hasilnya berbeza atau demo gagal, dan itu pun sebahagian daripada pelajaran. Anda boleh menaip soalan dalam chat pada bila-bila masa. Baik, kita mulakan dengan peta malam ini.",
+    backup: null
+  },
+  {
+    n: 2, seg: "s0", sec: 90, tag: null,
+    t: "Malam ini kita terus tunjuk, bukan hanya bercakap",
+    pts: [
+      "14 minit slaid, kemudian demo langsung",
+      "Sembang, ruang kerja ejen, dan alat pengekodan",
+      "Soal jawab sepuluh minit terakhir",
+      "Semua data demo ialah rekaan"
+    ],
+    vis: "Bar masa mendatar 90 minit dengan lima blok berwarna (14, 32, 20, 14, 10). Nama alat ditulis kecil di bawah setiap blok.",
+    note: "Malam ini kita bergerak dalam lima langkah. Empat belas minit pertama ialah slaid: mesej teras, peta alat, kerangka arahan dan peraturan data. Kemudian tiga puluh dua minit demo sembang: satu prompt yang sama pada Claude, ChatGPT dan Gemini, merentasi kerja akademik, pentadbiran dan penyelidikan. Selepas itu dua puluh minit ruang kerja ejen: Claude Cowork, ChatGPT Work dan Gemini Gem. Kemudian empat belas minit alat pengekodan: Claude Code dan ChatGPT Codex. Akhir sekali sepuluh minit soal jawab. Anda tidak perlu tahu pengaturcaraan. Bahagian kod ialah untuk melihat apa yang mungkin, dan bagaimana kita menyemak hasilnya.",
+    backup: null
+  },
+  {
+    n: 3, seg: "s0", sec: 90, tag: null,
+    t: "AI pantas, tetapi boleh tersilap dengan yakin",
+    pts: [
+      "Ia menyediakan draf, bukan keputusan",
+      "Ia boleh yakin walaupun salah",
+      "Nilainya bergantung pada arahan dan semakan",
+      "Anda kekal bertanggungjawab ke atas hasil"
+    ],
+    vis: "Dua kotak besar bersebelahan: kiri bertanda Draf daripada AI (hijau), kanan bertanda Keputusan daripada anda (maroon). Satu anak panah pendek di antara kedua-duanya.",
+    note: "Mesej teras malam ini ringkas: AI ialah pembantu yang pantas, tetapi tidak boleh dipercayai sepenuhnya. Ia boleh menulis draf, merangka rubrik dan meringkaskan dokumen dalam beberapa saat. Namun ia juga boleh menulis dengan yakin sambil tersilap, termasuk mereka rujukan yang tidak wujud. Sebab itu saya sebut: draf daripada AI, keputusan daripada anda. Kualiti hasil bergantung pada tiga perkara yang kita kawal: cara kita mengarah, cara kita menyemak, dan data yang kita berikan. Sepanjang malam ini, setiap demo akan menunjukkan ketiga-tiganya. Jika anda hanya ingat satu ayat, ingatlah bahawa anda kekal bertanggungjawab ke atas apa yang anda hantar atau terbitkan.",
+    backup: null
+  },
+  {
+    n: 4, seg: "s0", sec: 150, tag: null,
+    t: "Tiga peringkat alat AI yang akan kita cuba",
+    pts: [
+      "Sembang: Claude, ChatGPT, Gemini",
+      "Ruang kerja: Claude Cowork, ChatGPT Work, Gemini Gem",
+      "Pengekodan: Claude Code dan ChatGPT Codex",
+      "Semakin berkuasa, semakin penting kawalan anda"
+    ],
+    vis: "Tiga baris bertingkat seperti tangga. Setiap baris menyenaraikan nama alat dalam kotak putih. Baris Gem diberi nota kecil: pembantu tersuai, bukan ejen.",
+    note: "Kita akan lihat tiga peringkat alat. Peringkat pertama ialah sembang: Claude, ChatGPT dan Gemini. Anda bertanya, ia menjawab, anda menyemak. Peringkat kedua ialah ruang kerja: Claude Cowork dan ChatGPT Work boleh bertindak pada fail anda untuk menghasilkan dokumen atau jadual, manakala Gemini Gem ialah pembantu tersuai dengan arahan tetap dan fail rujukan. Saya jujur di sini: Gem bukan ejen yang bertindak sendiri, tetapi ia cara paling mudah untuk bermula. Peringkat ketiga ialah alat pengekodan: Claude Code dan Codex dalam ChatGPT. Semakin tinggi peringkat, semakin banyak yang boleh dilakukan, dan semakin penting kawalan anda. Ciri dan akses berubah, jadi saya tandakan PERLU SEMAK pada bahan.",
+    backup: null
+  },
+  {
+    n: 5, seg: "s0", sec: 120, tag: null,
+    t: "Satu prompt lima elemen, guna pada mana-mana alat",
+    pts: [
+      "Peranan: siapa AI itu",
+      "Konteks: situasi, khalayak dan bahan",
+      "Tugasan: satu kata kerja yang jelas",
+      "Format dan kekangan: rupa hasil, had, larangan"
+    ],
+    vis: "Lima lencana bernombor dalam satu baris. Di bawahnya, tiga logo teks kecil (Claude, ChatGPT, Gemini) tanpa ikon berjenama, dengan garis menghala ke satu kotak prompt.",
+    note: "Satu kemahiran yang boleh dibawa ke semua alat ialah menulis arahan dengan lima elemen. Peranan: siapa AI itu. Konteks: situasi, khalayak dan bahan. Tugasan: satu kata kerja yang jelas. Format: rupa hasil yang anda mahu. Kekangan: had, larangan dan apa yang tidak boleh ditambah. Prompt yang sama boleh disalin ke Claude, ChatGPT atau Gemini. Hasilnya akan berbeza kerana modelnya berbeza, dan itu berguna untuk dibandingkan. Dalam bahan webinar ada sembilan prompt siap guna dengan ruang letak dalam kurungan siku. Dalam demo nanti, kita mulakan dengan arahan yang lemah, kemudian arahan lima elemen, dan lihat bezanya.",
+    backup: null
+  },
+  {
+    n: 6, seg: "s0", sec: 90, tag: null,
+    t: "Lindungi data sebelum menaip apa-apa",
+    pts: [
+      "Jangan tampal data peribadi pelajar atau staf",
+      "Jangan muat naik dokumen sulit atau manuskrip semakan",
+      "Jangan dedahkan kata laluan atau kunci API",
+      "Rujuk [semak garis panduan UTM terkini]"
+    ],
+    vis: "Tiga ikon mangga besar dengan satu ayat pendek di bawah setiap satu. Poin keempat dalam jalur maroon nipis di bahagian bawah.",
+    note: "Sebelum kita menaip apa-apa, tiga peraturan data. Jangan tampal data peribadi pelajar atau staf, seperti nama berserta markah. Jangan muat naik dokumen sulit, termasuk manuskrip yang diserahkan kepada anda untuk semakan sulit. Jangan dedahkan kata laluan atau kunci API. Akta Perlindungan Data Peribadi 2010 berkaitan, tetapi butirannya PERLU SEMAK, dan garis panduan UTM tentang penggunaan AI ialah rujukan anda: [semak garis panduan UTM terkini]. Sebab itu semua demo malam ini menggunakan data rekaan. Apabila kita masuk ke ejen yang boleh membaca fail, peraturan ini menjadi lebih penting, bukan kurang.",
+    backup: null
+  },
+  {
+    n: 7, seg: "s0", sec: 90, tag: null,
+    t: "Ejen boleh bertindak, jadi anda yang meluluskan",
+    pts: [
+      "Beri akses hanya kepada folder rekaan atau yang dibenarkan",
+      "Baca rancangan sebelum meluluskan langkah",
+      "Semak setiap fail yang dihasilkan atau diubah",
+      "Tahu cara menghentikannya dan kekalkan salinan asal"
+    ],
+    vis: "Satu ikon folder di kiri dengan bingkai putus-putus hijau (sempadan akses). Di kanan, ikon ejen dengan satu tanda semak maroon bertanda Kelulusan anda.",
+    note: "Alat ejen berbeza daripada sembang kerana ia boleh bertindak: membaca folder, mencipta fail, malah menjalankan kod. Itu menjimatkan masa, tetapi juga menambah risiko. Amalan saya ada empat. Pertama, beri akses hanya kepada folder rekaan atau folder yang anda dibenarkan. Kedua, baca rancangan dan langkah yang dicadangkan sebelum meluluskan. Ketiga, semak setiap fail yang dihasilkan atau diubah. Keempat, tahu cara menghentikannya dan simpan salinan asal. Kawalan kelulusan sebenar berbeza mengikut alat, jadi kita akan lihat sendiri dalam demo dan saya tandakan PERLU SEMAK. Ejen ialah pembantu yang bekerja pantas, bukan pekerja yang boleh dibiarkan tanpa pengawasan.",
+    backup: null
+  },
+  {
+    n: 8, seg: "s0", sec: 60, tag: null,
+    t: "Semak sebelum guna: fakta, rujukan, ringkasan, kod",
+    pts: [
+      "Semak fakta penting dengan sumber asal",
+      "Sahkan rujukan wujud melalui DOI atau pangkalan data",
+      "Bandingkan ringkasan dengan dokumen asal",
+      "Baca dan uji kod sebelum digunakan"
+    ],
+    vis: "Empat baris ringkas, setiap satu dengan ikon kaca pembesar kecil dan jenis hasil di kiri. Tiada gambar rajah lain.",
+    note: "Semakan berbeza mengikut jenis hasil. Untuk fakta dan angka, semak dengan sumber asal. Untuk rujukan, buka DOI atau cari tajuk dalam pangkalan data akademik, kerana rujukan yang direka kelihatan sangat sahih. Untuk ringkasan dokumen, bandingkan dengan dokumen asal, terutamanya tarikh, syarat dan pengecualian. Untuk kod, baca apa yang dijana dan cuba jalankan sebelum digunakan. Menanya AI semula untuk mengesahkan jawapannya sendiri bukan pengesahan bebas. Kita akan lihat contoh rujukan palsu secara langsung pada minit empat puluh, jadi ingat empat baris ini apabila kita sampai di sana.",
+    backup: null
+  },
+  {
+    n: 9, seg: "s0", sec: 90, tag: "DEMO",
+    t: "Peraturan demo malam ini",
+    pts: [
+      "Semua data ialah rekaan atau awam",
+      "Hasil setiap larian berbeza, ini normal",
+      "Jika demo gagal, saya guna tangkapan skrin",
+      "Taip soalan dalam chat, saya jawab kemudian"
+    ],
+    vis: "Empat baris ringkas dengan ikon kecil. Di penjuru bawah kanan, teks kecil: Mari mulakan demo 1.",
+    note: "Beberapa perkara tentang cara demo berjalan. Semua data ialah rekaan atau awam. Hasil setiap larian berbeza walaupun arahan sama, jadi jika hasil anda tidak sama dengan hasil saya, itu normal. Jika alat lambat atau gagal, saya akan beralih kepada tangkapan skrin sandaran dan meneruskan. Anda boleh menaip soalan dalam chat sepanjang sesi; moderator akan mengumpulkannya dan saya jawab pada bahagian soal jawab, kecuali soalan yang berkaitan terus dengan demo. Bahan lengkap, termasuk semua prompt, akan dikongsi selepas sesi. Baik, kita mulakan demo pertama: satu prompt, tiga alat.",
+    backup: null
+  },
+  {
+    n: 10, seg: "s4", sec: 120, tag: null,
+    t: "Tiga langkah selepas malam ini",
+    pts: [
+      "Pilih satu tugasan kecil yang berulang",
+      "Tulis arahan lima elemen, semak, baiki",
+      "Lindungi data dan rujuk garis panduan UTM",
+      "Bahan webinar dikongsi dalam chat"
+    ],
+    vis: "Latar hijau tua. Tiga nombor besar (1, 2, 3) dengan satu ayat di sebelah setiap satu. Pautan bahan dalam kotak lime di bawah. Ucapan terima kasih kecil untuk IPF.",
+    note: "Kita hampir habis. Tiga langkah selepas malam ini. Pertama, pilih satu tugasan kecil yang berulang dalam kerja anda, contohnya e-mel rutin atau minit mesyuarat. Kedua, tulis arahan lima elemen, jalankan, semak hasilnya dan baiki arahan. Ketiga, lindungi data dan rujuk garis panduan UTM yang terkini. Jangan cuba mempelajari semua alat sekaligus. Mulakan dengan sembang, kemudian cuba ruang kerja ejen apabila anda selesa, dan pertimbangkan alat pengekodan hanya jika ia sesuai dengan kerja anda. Bahan webinar dan prompt dikongsi dalam chat. Terima kasih kepada IPF dan semua yang hadir. Ingat: AI membantu, anda yang memutuskan.",
+    backup: null
+  }
+];
+
+const MODULES = [
+  {
+    id: "M1", seg: "s1", from: 14, to: 19, tag: "DEMO",
+    t: "Satu prompt, tiga alat: Claude, ChatGPT, Gemini",
+    tools: ["Claude", "ChatGPT", "Gemini"],
+    goal: "Tunjuk bahawa arahan yang lemah dan arahan lima elemen memberi hasil berbeza, dan arahan yang sama boleh disalin ke ketiga-tiga alat.",
+    prep: [
+      "Tiga tab bersebelahan: Claude, ChatGPT, Gemini, semuanya sembang baharu.",
+      "Fail teks dengan Arahan 1 dan Arahan 2 sedia untuk disalin."
+    ],
+    steps: [
+      "Nyatakan semua data ialah rekaan. Tampal Arahan 1 (lemah) dalam Claude sahaja dan tunjuk hasil yang generik.",
+      "Tampal Arahan 2 (lima elemen) dalam Claude, kemudian salin yang sama ke ChatGPT dan Gemini.",
+      "Papar ketiga-tiga hasil sebelah-menyebelah. Bandingkan nada, panjang, dan apa yang ditambah tanpa diminta.",
+      "Semak: adakah AI menambah bilik, nama atau tarikh yang tidak diberi?",
+      "Tunjuk satu pusingan pembaikan pada satu alat: Pendekkan kepada 80 perkataan dan tukar nada lebih mesra."
+    ],
+    samples: [
+      { label: "Arahan 1 (lemah)", text: "Tulis e-mel tukar masa kuliah." },
+      { label: "Arahan 2 (lima elemen, data rekaan)", text: "Peranan: Anda ialah pensyarah universiti yang menulis dengan jelas dan mesra.\nKonteks: Saya mengajar Kursus Contoh 1013 kepada pelajar tahun satu. Kuliah Selasa yang biasanya 8.00 pagi dipindahkan ke Khamis, 10.00 pagi, di Bilik Contoh 2, kerana bilik asal tidak tersedia. Ini perubahan untuk minggu ini sahaja.\nTugasan: Tulis e-mel memaklumkan perubahan itu kepada pelajar.\nFormat: Baris subjek, satu perenggan pendek, dan satu baris meminta pelajar mengesahkan penerimaan.\nKekangan: Maksimum 100 perkataan, nada mesra tetapi jelas, jangan tambah maklumat lain, Bahasa Melayu." }
+    ],
+    promptRef: [],
+    chat: "Taip dalam chat: apakah satu beza yang anda nampak antara tiga hasil?",
+    note: "Saya mulakan dengan arahan satu ayat dalam Claude dan kita lihat hasilnya yang generik. Kemudian arahan lima elemen yang sama saya salin ke Claude, ChatGPT dan Gemini. Perhatikan tiga perkara: nada, panjang, dan apa yang AI tambah tanpa diminta, seperti nama bilik atau tarikh. Hasil setiap alat tidak sama, dan itu pengajaran pertama: bandingkan, jangan terima yang pertama.",
+    backup: "Papar slaid B1 (tersembunyi): tangkapan skrin hasil Arahan 1 dan hasil Arahan 2 daripada ketiga-tiga alat, dijalankan semasa latihan."
+  },
+  {
+    id: "M2", seg: "s1", from: 19, to: 26, tag: "DEMO",
+    t: "Akademik: rubrik, soalan penilaian dan konsep sukar",
+    tools: ["Claude", "Gemini"],
+    goal: "Tunjuk AI sebagai penyedia draf rubrik dan penerang konsep, dengan pensyarah yang menyemak keselarasan dengan hasil pembelajaran.",
+    prep: [
+      "Prompt A2 dan A3 sedia dalam fail teks bersama data rekaan di bawah.",
+      "Sembang baharu dalam Claude dan Gemini."
+    ],
+    steps: [
+      "Tampal Prompt A2 bersama hasil pembelajaran rekaan dalam Claude. Jalankan dan tunjuk jadual rubrik serta tiga soalan.",
+      "Tanya peserta dalam chat: apakah satu perkara yang anda akan semak?",
+      "Salin prompt yang sama ke Gemini dan bandingkan satu kriteria sahaja.",
+      "Ubah satu kriteria secara langsung untuk menunjukkan ini draf, bukan hasil akhir.",
+      "Jalankan Prompt A3 pada satu alat untuk konsep rekaan di bawah. Tunjuk tiga peringkat penerangan dan nyatakan had analogi."
+    ],
+    samples: [
+      { label: "Data rekaan untuk ditampal dalam Prompt A2", text: "Tugasan: Projek Mini, Kursus Contoh 1013, bernilai 30 peratus.\nHasil pembelajaran (rekaan):\n1. Menerangkan prinsip asas topik contoh dengan tepat.\n2. Menganalisis satu kes mudah menggunakan kaedah yang diajar.\n3. Membentangkan penyelesaian secara bertulis dengan jelas." },
+      { label: "Data untuk Prompt A3", text: "Konsep: nilai p (p-value) dalam ujian hipotesis.\nKursus: Kursus Contoh 1013, pelajar tahun satu.\nLatar pelajar: belum ada asas statistik lanjutan." }
+    ],
+    promptRef: ["A2", "A3"],
+    chat: "Taip dalam chat: apakah satu perkara yang anda akan semak sebelum memberi rubrik ini kepada pelajar?",
+    note: "Rubrik dan soalan penilaian memakan masa, jadi AI berguna sebagai draf pertama. Tetapi lihat, aras Bloom dan kriteria mesti sepadan dengan hasil pembelajaran kursus anda, dan itu hanya anda yang boleh pastikan. Saya ubah satu kriteria secara langsung untuk menunjukkan ini draf. Untuk konsep sukar, AI pandai membuat analogi, tetapi analogi memudahkan dan boleh menjadi kurang tepat, jadi semak dengan buku teks anda.",
+    backup: "Papar slaid B2 (tersembunyi): tangkapan skrin rubrik dan soalan, serta penerangan konsep, daripada latihan."
+  },
+  {
+    id: "M3", seg: "s1", from: 26, to: 32, tag: "DEMO",
+    t: "Pentadbiran: e-mel rasmi dan minit mesyuarat",
+    tools: ["ChatGPT", "Gemini"],
+    goal: "Tunjuk nota kasar menjadi draf e-mel dan minit, dan bagaimana kekangan menghalang AI membuat andaian.",
+    prep: [
+      "Guna alat yang berbeza daripada modul 2, contohnya ChatGPT untuk P1 dan Gemini untuk P2, untuk menunjukkan prompt boleh dibawa ke mana-mana.",
+      "Nota kasar dan nota mesyuarat rekaan sedia dalam fail teks."
+    ],
+    steps: [
+      "Tunjuk nota kasar rekaan. Tampal Prompt P1 dengan nota tersebut dalam ChatGPT dan jalankan.",
+      "Semak bersama peserta: adakah AI menambah fakta yang tidak diberi?",
+      "Minta satu susulan: Jadikan lebih ringkas, maksimum 100 perkataan.",
+      "Dalam Gemini, tampal Prompt P2 dengan nota mesyuarat rekaan yang menggunakan kod peserta.",
+      "Tunjuk bagaimana TIDAK DINYATAKAN muncul pada tindakan yang tiada penanggungjawab atau tarikh."
+    ],
+    samples: [
+      { label: "Nota kasar rekaan untuk ditampal dalam Prompt P1", text: "- kepada: Pengerusi Jawatankuasa Contoh\n- tujuan: mohon kelulusan menggunakan bilik seminar untuk bengkel sehari\n- tarikh bengkel: 12 November 2026; perlukan jawapan sebelum 30 Oktober 2026" },
+      { label: "Nota mesyuarat rekaan untuk ditampal dalam Prompt P2", text: "Mesyuarat Contoh Jawatankuasa Bengkel, 5 Oktober 2026.\n- Peserta A: cadang bengkel sehari pada 12 November 2026.\n- Peserta B: bilik seminar perlu ditempah; kapasiti 40 orang.\n- Peserta C: bajet belum dimuktamadkan.\n- Keputusan: bengkel diteruskan jika bilik diluluskan.\n- Tindakan: Peserta B menghantar permohonan bilik; tarikh tidak disebut.\n- Tindakan: Peserta C menyemak bajet; tarikh tidak disebut." }
+    ],
+    promptRef: ["P1", "P2"],
+    chat: null,
+    note: "Untuk e-mel, AI menukar nota kasar kepada draf yang sopan. Semak satu perkara: adakah ia menambah fakta yang saya tidak beri? Untuk minit mesyuarat, lihat bagaimana kekangan TIDAK DINYATAKAN menghalang AI daripada membuat andaian tentang penanggungjawab dan tarikh. Saya sengaja guna alat yang berbeza daripada tadi untuk menunjukkan prompt boleh dibawa ke mana-mana. Prompt P3, ringkasan dokumen awam, ada dalam bahan untuk anda cuba sendiri.",
+    backup: "Papar slaid B3 (tersembunyi): tangkapan skrin draf e-mel dan jadual tindakan minit daripada latihan."
+  },
+  {
+    id: "M4", seg: "s1", from: 32, to: 40, tag: "DEMO",
+    t: "Penyelidikan: peta topik dan semakan tiruan",
+    tools: ["Gemini", "Claude"],
+    goal: "Tunjuk AI untuk meneroka istilah dan menilai draf sebagai pengulas pertama, tanpa membekalkan rujukan dan tanpa manuskrip sulit.",
+    prep: [
+      "Prompt R1 dan R3 sedia. Abstrak di bawah ialah rekaan dan tidak wujud.",
+      "Ingatkan peserta: jangan muat naik manuskrip sulit."
+    ],
+    steps: [
+      "Tampal Prompt R1 dengan topik contoh dalam Gemini. Tunjuk peta konsep dan istilah carian. Tunjuk bahawa prompt melarang rujukan.",
+      "Nyatakan abstrak rekaan tidak wujud, hanya untuk latihan. Tampal Prompt R3 bersama abstrak dalam Claude.",
+      "Baca jadual isu bersama peserta dan tanya: isu mana yang munasabah, mana yang tidak?",
+      "Minta satu susulan: Nyatakan apa yang tidak dapat dinilai daripada abstrak sahaja.",
+      "Simpulkan: pengulas pertama yang pantas, penilaian akhir tetap anda."
+    ],
+    samples: [
+      { label: "Data rekaan untuk Prompt R1", text: "Topik: penggunaan AI generatif dalam pengajaran pendidikan tinggi.\nTujuan: latihan menyediakan cadangan kajian.\nApa yang sudah difahami: definisi asas AI generatif." },
+      { label: "Abstrak rekaan untuk ditampal dalam Prompt R3", text: "Kajian ini mencadangkan kaedah baharu untuk meramal kegagalan peralatan di kilang kecil menggunakan sensor kos rendah. Data dikumpul daripada satu mesin selama dua minggu. Model pembelajaran mesin dilatih dan mencapai ketepatan yang sangat tinggi. Keputusan menunjukkan kaedah ini sesuai digunakan di semua kilang. Kajian ini menyumbang kepada perkembangan industri moden." }
+    ],
+    promptRef: ["R1", "R3"],
+    chat: "Taip dalam chat: isu mana pada jadual semakan yang anda rasa paling munasabah?",
+    note: "Untuk penyelidikan, AI sesuai untuk meneroka istilah dan mencabar idea, bukan untuk membekalkan rujukan. Perhatikan Prompt R1 melarang rujukan, dan kita akan lihat sebabnya sebentar lagi. Kemudian semakan tiruan pada abstrak rekaan: lihat isu yang munasabah dan yang tidak. Ia pengulas pertama yang pantas, penilaian akhir tetap anda. Ingat, jangan muat naik manuskrip sulit ke alat awam.",
+    backup: "Papar slaid B4 (tersembunyi): tangkapan skrin peta topik dan jadual semakan tiruan daripada latihan."
+  },
+  {
+    id: "M5", seg: "s1", from: 40, to: 46, tag: "DEMO",
+    t: "Ujian rujukan palsu: AI boleh mereka rujukan yang sahih",
+    tools: ["ChatGPT", "Claude"],
+    goal: "Tunjuk secara langsung bahawa rujukan yang dijana boleh tidak wujud, dan bahawa meminta AI mengesahkan dirinya bukan pengesahan bebas.",
+    prep: [
+      "Google Scholar dan tab DOI sedia dibuka.",
+      "Sediakan tangkapan skrin sandaran kerana hasil setiap larian berbeza."
+    ],
+    steps: [
+      "Tampal arahan di bawah dalam sembang baharu dan jalankan.",
+      "Ambil satu rujukan. Cari tajuknya di Google Scholar. Cuba buka DOI yang diberi dan tunjuk sama ada ia sepadan.",
+      "Ulang untuk dua rujukan lagi. Tandakan yang tidak ditemui.",
+      "Tanya AI: Adakah rujukan ini sahih? Tunjuk jawapan yang yakin, dan terangkan ini bukan pengesahan bebas.",
+      "Tunjuk contoh ayat pengisytiharan penggunaan AI dan ingatkan peserta menyemak dasar penerbit."
+    ],
+    samples: [
+      { label: "Arahan untuk demo", text: "Berikan 5 rujukan jurnal (pengarang, tahun, tajuk, nama jurnal, DOI) tentang pengaruh muzik latar terhadap ketepatan menaip pelajar universiti di Malaysia." },
+      { label: "Contoh ayat pengisytiharan (PERLU SEMAK format yang diminta penerbit)", text: "Alat AI digunakan untuk membaiki bahasa bahagian pengenalan. Penulis telah menyemak keseluruhan teks dan bertanggungjawab sepenuhnya ke atas semua kandungan." }
+    ],
+    promptRef: [],
+    chat: "Taip dalam chat: berapa rujukan yang anda jangka akan ditemui sebenarnya?",
+    note: "Sekarang bahagian yang paling penting. Saya minta lima rujukan pada topik yang sempit. Mari kita semak satu demi satu: cari tajuk dalam Google Scholar dan buka DOI. Lihat berapa yang wujud. Kemudian saya tanya AI sama ada rujukan ini sahih, dan jawapannya yakin, tetapi itu bukan pengesahan. Hasil setiap larian berbeza, jadi jika demo ini tidak menghasilkan rujukan palsu, saya guna tangkapan skrin sandaran. Untuk penerbitan, semak dasar pengisytiharan penerbit.",
+    backup: "Papar slaid B5 (tersembunyi): tangkapan skrin rujukan yang dijana dan hasil semakan daripada latihan. Wajib disediakan kerana hasil setiap larian berbeza."
+  },
+  {
+    id: "M6", seg: "s2", from: 46, to: 51, tag: "DEMO",
+    t: "Claude Cowork: satu folder rekaan menjadi jadual tindakan",
+    tools: ["Claude Cowork"],
+    goal: "Tunjuk ruang kerja ejen yang membaca fail dalam satu folder yang dibenarkan dan menghasilkan jadual serta draf e-mel, di bawah kelulusan pengguna.",
+    prep: [
+      "Cipta folder Folder Contoh IPF dengan empat fail teks rekaan (kandungan di bawah). Jangan campurkan fail sebenar.",
+      "Pasang dan uji aplikasi terlebih dahulu. PERLU SEMAK pelan dan ketersediaan akaun anda.",
+      "Simpan salinan folder asal sebelum demo."
+    ],
+    steps: [
+      "Buka Claude Cowork. Beri akses hanya kepada Folder Contoh IPF, bukan Documents atau Desktop.",
+      "Tampal Arahan AG1. Jika alat meminta kebenaran atau menunjukkan rancangan, baca dan tunjuk kepada peserta sebelum meluluskan.",
+      "Biarkan ia bekerja. Terangkan apa yang berlaku semasa menunggu.",
+      "Buka fail hasil. Semak dua baris jadual terhadap nota asal secara langsung.",
+      "Tunjuk fail asal tidak berubah dan tanda TIDAK DINYATAKAN pada tindakan yang tiada penanggungjawab atau tarikh."
+    ],
+    samples: [
+      { label: "Kandungan empat fail rekaan dalam Folder Contoh IPF", text: "nota-1.txt: Mesyuarat Contoh Jawatankuasa Bengkel, 5 Oktober 2026. Peserta A akan menghantar permohonan bilik seminar sebelum 9 Oktober 2026. Peserta B menyemak bajet; tarikh tidak disebut.\n\nnota-2.txt: Mesyuarat Contoh Unit Latihan, 12 Oktober 2026. Peserta C menyediakan senarai peserta bengkel sebelum 16 Oktober 2026. Peserta A mengesahkan penceramah; tarikh tidak disebut.\n\nnota-3.txt: Mesyuarat Contoh Jawatankuasa Bengkel, 19 Oktober 2026. Peserta B melaporkan bajet siap. Peserta D akan mencetak bahan bengkel sebelum 5 November 2026.\n\nnota-4.txt: Mesyuarat Contoh Unit Latihan, 26 Oktober 2026. Penanggungjawab belum ditetapkan untuk menyediakan borang maklum balas. Peserta C menempah katering sebelum 2 November 2026." }
+    ],
+    promptRef: ["AG1"],
+    chat: null,
+    note: "Sekarang kita naik peringkat. Saya beri Claude Cowork satu folder rekaan berisi empat nota mesyuarat dan minta satu jadual tindakan serta draf e-mel. Perhatikan apa yang diminta sebelum ia bertindak, folder yang saya benarkan, dan fail asal yang tidak berubah. Kemudian saya semak dua baris jadual terhadap nota asal. Ejen menjimatkan masa membaca, tetapi semakan tetap milik kita.",
+    backup: "Papar slaid B6 (tersembunyi): tangkapan skrin rancangan atau permintaan kebenaran, jadual hasil dan folder Hasil daripada latihan."
+  },
+  {
+    id: "M7", seg: "s2", from: 51, to: 56, tag: "DEMO",
+    t: "ChatGPT Work: tugasan dan folder yang sama, ejen yang berbeza",
+    tools: ["ChatGPT Work"],
+    goal: "Tunjuk bahawa arahan lima elemen yang sama berfungsi pada ejen lain, dan bandingkan cara ia merancang, bertanya dan menyampaikan hasil.",
+    prep: [
+      "Guna salinan Folder Contoh IPF yang sama (pulihkan daripada salinan jika perlu).",
+      "Buka aplikasi desktop ChatGPT. PERLU SEMAK sama ada akaun anda sudah mempunyai akses kepada Work, kerana pelancarannya berperingkat.",
+      "Pastikan tiada plugin atau sambungan ke e-mel, kalendar atau Drive sebenar dihidupkan semasa demo."
+    ],
+    steps: [
+      "Pilih Work dalam aplikasi desktop ChatGPT. Lampirkan hanya Folder Contoh IPF.",
+      "Tampal Arahan AG1 yang sama seperti modul 6.",
+      "Baca rancangan atau soalan yang dikemukakan dan tunjuk kepada peserta sebelum meluluskan.",
+      "Buka hasil. Bandingkan dengan Claude Cowork: soalan yang ditanya, format hasil dan masa yang diambil.",
+      "Semak dua baris terhadap nota asal. Simpulkan: alat berbeza, tabiat semakan sama."
+    ],
+    samples: [],
+    promptRef: ["AG1"],
+    chat: "Taip dalam chat: mana satu hasil yang anda lebih yakin untuk dihantar, dan mengapa?",
+    note: "Tugasan dan folder yang sama, kini dalam ChatGPT Work. Bandingkan soalan yang ditanya, rancangannya, format hasil dan berapa lama ia mengambil masa. Ini bukan pertandingan. Tujuannya ialah melihat bahawa arahan lima elemen yang sama berfungsi pada ejen yang berbeza, dan semakan tetap diperlukan. Jika akaun saya belum mempunyai akses kepada Work, saya guna tangkapan skrin sandaran.",
+    backup: "Papar slaid B7 (tersembunyi): tangkapan skrin rancangan, hasil dan folder Hasil daripada latihan. Gunakan juga jika akses Work belum tersedia pada akaun."
+  },
+  {
+    id: "M8", seg: "s2", from: 56, to: 66, tag: "DEMO",
+    t: "Gemini Gem: simpan prompt anda sebagai pembantu tetap",
+    tools: ["Gemini"],
+    goal: "Tunjuk cara mencipta Gem daripada prompt yang kerap digunakan, dan jelaskan bahawa Gem ialah pembantu tersuai, bukan ejen yang bertindak sendiri pada fail anda.",
+    prep: [
+      "Gem hanya boleh dicipta atau disunting dalam aplikasi web Gemini (gemini.google.com).",
+      "Sediakan satu Gem siap sebagai sandaran jika penciptaan langsung tersekat.",
+      "Sediakan satu fail contoh format surat rasmi yang awam atau rekaan untuk ruang Knowledge (pilihan)."
+    ],
+    steps: [
+      "Buka gemini.google.com, pilih Gems, kemudian New Gem. Berikan nama: Pembantu E-mel Rasmi.",
+      "Tampal Instructions daripada Prompt GEM1. Tunjuk pilihan untuk meminta Gemini menulis semula arahan dan baca hasilnya sebelum menerima.",
+      "Pilihan: tambah satu fail rekaan atau awam di bawah Knowledge. Jangan tambah dokumen sebenar.",
+      "Uji dalam ruang pratonton di sebelah kanan dengan nota kasar di bawah. Klik Save, kerana pratonton tidak menyimpan secara automatik.",
+      "Gunakan Gem yang telah disimpan dan bandingkan dengan hasil Prompt P1 tadi.",
+      "Terangkan: jika Gem dikongsi, penerima mungkin boleh melihat arahannya, jadi jangan masukkan maklumat sensitif."
+    ],
+    samples: [
+      { label: "Nota kasar untuk menguji Gem", text: "- kepada: Pengarah Pusat Contoh\n- tujuan: mohon menggunakan dewan kuliah untuk taklimat pelajar baharu\n- tarikh: 3 Januari 2027; perlukan jawapan sebelum 15 Disember 2026" }
+    ],
+    promptRef: ["GEM1"],
+    chat: "Taip dalam chat: tugasan berulang apa yang anda mahu jadikan Gem?",
+    note: "Gem ialah cara paling mudah untuk menyimpan prompt yang anda guna berulang. Saya cipta Gem pembantu e-mel rasmi dengan arahan tetap, uji dalam pratonton, kemudian simpan. Ingat, pratonton tidak menyimpan secara automatik. Kemudian saya tampal nota kasar dan bandingkan dengan Prompt P1 tadi. Saya jujur: Gem ialah pembantu tersuai, bukan ejen yang bertindak pada fail anda. Jika dikongsi, penerima mungkin boleh melihat arahan, jadi jangan letak maklumat sensitif.",
+    backup: "Papar slaid B8 (tersembunyi): tangkapan skrin borang Gem yang telah diisi dan hasil ujian. Atau buka Gem sandaran yang sudah disimpan."
+  },
+  {
+    id: "M9", seg: "s3", from: 66, to: 73, tag: "DEMO",
+    t: "Claude Code: CV rekaan menjadi laman web peribadi",
+    tools: ["Claude Code"],
+    goal: "Tunjuk alat pengekodan menukar CV rekaan kepada satu laman web yang boleh dibuka dalam pelayar, sambil menekankan cara pengguna bukan pengaturcara menyemak hasilnya.",
+    prep: [
+      "Cipta folder kosong demo-web-peribadi yang hanya mengandungi cv-contoh.md (kandungan di bawah).",
+      "Pasang dan log masuk Claude Code terlebih dahulu. Ia boleh digunakan melalui terminal atau aplikasi desktop; PERLU SEMAK pelan dan akses akaun anda.",
+      "Besarkan saiz fon terminal. Pastikan tiada kunci API atau fail lain dalam folder itu.",
+      "Ini asas kepada laman panduan web peribadi yang telah anda terbitkan. Papar laman itu sebagai hasil akhir jika masa mengizinkan."
+    ],
+    steps: [
+      "Buka Claude Code dalam folder demo-web-peribadi sahaja.",
+      "Tampal Arahan CODE1. Baca rancangan atau langkah yang dicadangkan dan luluskan.",
+      "Buka index.html dalam pelayar dan tunjuk hasilnya.",
+      "Minta satu perubahan: gunakan arahan susulan di bawah.",
+      "Semak: adakah ia menambah maklumat yang tiada dalam CV? Baca ringkasan tiga ayat yang diberikan, dan lihat fail yang berubah."
+    ],
+    samples: [
+      { label: "Kandungan cv-contoh.md (rekaan)", text: "# Aisyah Contoh\nJawatan: Pensyarah Kanan, Jabatan Contoh, Universiti Contoh\nPendidikan: PhD (Sains Data), Universiti Contoh, 2018\nPenerbitan: Kajian Contoh tentang Data Awam, Jurnal Contoh, 2022" },
+      { label: "Arahan susulan", text: "Tukar warna utama kepada hijau tua dan paparkan bahagian Penerbitan dengan lebih jelas. Jangan tambah maklumat baharu." }
+    ],
+    promptRef: ["CODE1"],
+    chat: null,
+    note: "Ini demo yang paling menarik untuk yang bukan pengaturcara. Saya ada satu folder dengan CV rekaan dan saya beri arahan lima elemen kepada Claude Code untuk membina laman web. Saya baca rancangannya, luluskan, kemudian buka hasilnya dalam pelayar. Saya minta satu perubahan. Kemudian semak: adakah ia menambah maklumat yang tiada dalam CV? Ini asas kepada laman panduan web peribadi yang telah saya terbitkan.",
+    backup: "Papar slaid B9 (tersembunyi): video pendek atau tangkapan skrin langkah ini, direkod semasa latihan. Wajib disediakan."
+  },
+  {
+    id: "M10", seg: "s3", from: 73, to: 80, tag: "DEMO",
+    t: "ChatGPT Codex: folder yang sama, alat pengekodan yang berbeza",
+    tools: ["ChatGPT Codex"],
+    goal: "Tunjuk arahan yang sama pada Codex, dan bandingkan cara perubahan dipaparkan serta cara pengguna menyemaknya sebelum menerima.",
+    prep: [
+      "Guna salinan segar folder demo-web-peribadi yang hanya mengandungi cv-contoh.md.",
+      "Buka aplikasi desktop ChatGPT dan pilih Codex. PERLU SEMAK akses dan pelan akaun anda.",
+      "Jangan hubungkan repositori sebenar dan jangan push ke mana-mana repositori semasa demo."
+    ],
+    steps: [
+      "Pilih Codex dan tunjuk folder demo-web-peribadi sahaja.",
+      "Tampal Arahan CODE1 yang sama seperti modul 9.",
+      "Baca perubahan yang dicadangkan sebelum menerima, kemudian buka index.html dalam pelayar.",
+      "Bandingkan dengan Claude Code: rancangan, cara perubahan dipaparkan, dan kualiti laman.",
+      "Simpulkan: kod yang berjalan belum tentu betul atau selamat. Baca, uji, dan simpan salinan."
+    ],
+    samples: [],
+    promptRef: ["CODE1"],
+    chat: "Taip dalam chat: antara dua laman itu, mana satu yang anda akan terbitkan, dan apa yang anda mahu semak dahulu?",
+    note: "Arahan dan folder yang sama, kini dalam Codex dalam aplikasi ChatGPT. Perhatikan bagaimana perubahan dipaparkan dan bagaimana kita menyemaknya sebelum menerima. Kod yang berjalan belum tentu betul atau selamat. Dan ingat, jangan push ke repositori sebenar semasa demo. Jika anda bukan pengaturcara, tidak mengapa: yang penting anda tahu apa yang mungkin, dan bila perlu bantuan rakan yang mahir.",
+    backup: "Papar slaid B10 (tersembunyi): video pendek atau tangkapan skrin hasil Codex daripada latihan."
+  },
+  {
+    id: "Q", seg: "s4", from: 80, to: 88, tag: null,
+    t: "Soal jawab daripada chat",
+    tools: [],
+    goal: "Jawab soalan peserta dengan ringkas dan jujur. Jika tidak pasti, katakan PERLU SEMAK dan janji semak selepas sesi.",
+    prep: [
+      "Moderator mengumpulkan soalan chat dan membaca satu demi satu.",
+      "Senarai sepuluh soalan dalam bahagian 7 sebagai pemula jika chat sunyi."
+    ],
+    steps: [
+      "Moderator membaca soalan. Jawab dalam kira-kira 30 saat setiap satu.",
+      "Untuk soalan berkaitan dasar, sebut [semak garis panduan UTM terkini] dan jangan meneka.",
+      "Jika soalan berkaitan demo, tunjuk semula dengan tangkapan skrin sandaran.",
+      "Dua minit terakhir: ambil satu soalan tentang tugasan yang mahu dicuba peserta."
+    ],
+    samples: [],
+    promptRef: [],
+    chat: null,
+    note: "Pilih soalan daripada chat dan jawab ringkas serta jujur. Jika tidak pasti, katakan PERLU SEMAK dan janji untuk menyemak selepas sesi. Jangan meneka tentang dasar atau ciri produk.",
+    backup: "Jika soalan sedikit, gunakan senarai sepuluh soalan dalam bahagian 7 sebagai pemula."
+  }
+];
+/*SLIDES_END*/
+
+/*OTHER_START*/
+const PROMPTS = [
+  {
+    id: "A1", group: "Akademik", title: "Rancangan pengajaran mingguan", mod: null,
+    peranan: "Anda ialah pereka pengajaran universiti yang berpengalaman dalam [bidang].",
+    konteks: "Saya mengajar [nama kursus] kepada pelajar [tahun atau tahap] yang baru mengenali [topik]. Kursus ini [bilangan] jam seminggu selama [bilangan] minggu.",
+    tugasan: "Cadangkan rancangan pengajaran untuk minggu [nombor] dengan topik [tajuk topik], merangkumi hasil pembelajaran, aktiviti dan penilaian ringkas.",
+    format: "Jadual dengan lajur masa, aktiviti pensyarah, aktiviti pelajar dan bahan yang diperlukan.",
+    kekangan: "Maksimum [bilangan] aktiviti. Tandakan mana-mana fakta yang perlu saya sahkan. Bahasa Melayu, istilah teknikal dalam Bahasa Inggeris."
+  },
+  {
+    id: "A2", group: "Akademik", title: "Rubrik dan soalan penilaian", mod: "M2",
+    peranan: "Anda ialah pakar penilaian pendidikan tinggi.",
+    konteks: "Tugasan [nama tugasan] dalam [nama kursus] bernilai [peratus] daripada markah kursus. Hasil pembelajaran: [senaraikan hasil pembelajaran].",
+    tugasan: "Bina rubrik penilaian dan tiga soalan penilaian pada aras Taksonomi Bloom yang berbeza.",
+    format: "Rubrik dalam jadual (kriteria, empat tahap pencapaian, huraian). Soalan dalam senarai bernombor dengan aras Bloom dinyatakan.",
+    kekangan: "Bahasa jelas untuk pelajar. Huraian setiap tahap boleh diukur. Jangan tambah kriteria di luar hasil pembelajaran. Nyatakan andaian anda."
+  },
+  {
+    id: "A3", group: "Akademik", title: "Menerangkan konsep sukar", mod: "M2",
+    peranan: "Anda ialah tutor yang sabar dan pandai menggunakan analogi.",
+    konteks: "Pelajar saya belajar [nama kursus] dan sukar memahami [konsep]. Latar mereka: [contoh: belum ada asas matematik lanjutan].",
+    tugasan: "Terangkan [konsep] dalam tiga peringkat: satu ayat, satu perenggan dengan analogi harian, dan satu contoh kerja langkah demi langkah.",
+    format: "Tiga bahagian berlabel, diikuti dua soalan semakan kefahaman beserta jawapan.",
+    kekangan: "Elakkan jargon tanpa penjelasan. Analogi daripada kehidupan harian pelajar. Nyatakan had analogi jika ia memudahkan sehingga kurang tepat."
+  },
+  {
+    id: "P1", group: "Pentadbiran", title: "E-mel atau surat rasmi", mod: "M3",
+    peranan: "Anda ialah pembantu tadbir yang mahir menulis surat rasmi Bahasa Melayu.",
+    konteks: "Saya [jawatan] di [jabatan] ingin menulis kepada [penerima dan jawatan] mengenai [perkara]. Nota kasar saya: [tampal nota kasar tanpa data peribadi].",
+    tugasan: "Tulis draf e-mel rasmi yang menyatakan tujuan, permintaan dan tarikh tindakan [tarikh].",
+    format: "Baris subjek, salam, tiga perenggan pendek, penutup dan ruang tandatangan [nama saya].",
+    kekangan: "Nada sopan dan tegas. Tidak lebih daripada [150] perkataan. Jangan menambah fakta atau tarikh yang tidak saya berikan."
+  },
+  {
+    id: "P2", group: "Pentadbiran", title: "Minit mesyuarat dan senarai tindakan", mod: "M3",
+    peranan: "Anda ialah setiausaha mesyuarat yang teliti.",
+    konteks: "Mesyuarat [nama mesyuarat] pada [tarikh]. Berikut nota saya, dengan nama diganti kod peserta (Peserta A, Peserta B): [tampal nota].",
+    tugasan: "Susun nota menjadi minit ringkas: perkara dibincangkan, keputusan, dan tindakan susulan dengan penanggungjawab dan tarikh.",
+    format: "Tiga bahagian. Senarai tindakan dalam jadual (tindakan, penanggungjawab, tarikh akhir).",
+    kekangan: "Guna hanya maklumat dalam nota. Tulis TIDAK DINYATAKAN jika penanggungjawab atau tarikh tiada. Jangan menyimpulkan keputusan yang tidak disebut."
+  },
+  {
+    id: "P3", group: "Pentadbiran", title: "Ringkasan dokumen panjang", mod: null,
+    peranan: "Anda ialah penganalisis dokumen yang ringkas dan berhati-hati.",
+    konteks: "Dokumen di bawah ialah [jenis dokumen awam, contoh: garis panduan yang telah diterbitkan]. Pembaca saya ialah [siapa] yang hanya ada [bilangan] minit.",
+    tugasan: "Ringkaskan dokumen kepada lima perkara utama dan senaraikan tindakan yang perlu diambil pembaca.",
+    format: "Lima poin bernombor, setiap satu satu ayat, dengan nombor bahagian dokumen sebagai rujukan. Kemudian senarai tindakan.",
+    kekangan: "Jangan menambah maklumat di luar dokumen. Jika sesuatu tidak jelas, tulis tidak jelas dalam dokumen. Kekalkan istilah asal."
+  },
+  {
+    id: "R1", group: "Penyelidikan", title: "Meneroka topik baharu", mod: "M4",
+    peranan: "Anda ialah penyelidik kanan dalam [bidang] yang membantu penyelidik baharu.",
+    konteks: "Saya baru meneroka [topik penyelidikan] untuk [tujuan, contoh: cadangan kajian]. Saya sudah faham [apa yang sudah diketahui].",
+    tugasan: "Bina peta topik: konsep utama, perdebatan utama, kaedah lazim dan istilah carian untuk pangkalan data akademik.",
+    format: "Jadual dengan lajur konsep, huraian satu ayat dan istilah carian dalam Bahasa Inggeris.",
+    kekangan: "Jangan berikan rujukan, pengarang atau tahun. Hanya konsep dan istilah. Tandakan konsep yang anda kurang pasti."
+  },
+  {
+    id: "R2", group: "Penyelidikan", title: "Mencabar idea soalan kajian", mod: null,
+    peranan: "Anda ialah penyelia PhD yang kritis tetapi menyokong.",
+    konteks: "Idea kajian saya: [terangkan idea dalam tiga ayat]. Bidang: [bidang]. Saya di peringkat [awal atau pertengahan].",
+    tugasan: "Cabar idea ini melalui soalan Socratic: nyatakan andaian tersirat, jurang yang belum dijawab dan kelemahan kesahan. Kemudian cadangkan tiga versi soalan kajian yang lebih tajam.",
+    format: "Senarai lima soalan mencabar, kemudian tiga versi soalan kajian dalam jadual (versi, kekuatan, risiko).",
+    kekangan: "Jangan memuji berlebihan. Jangan mencipta literatur sedia ada. Jika saya minta dialog, tanya satu soalan pada satu masa."
+  },
+  {
+    id: "R3", group: "Penyelidikan", title: "Semakan tiruan (mock peer review)", mod: "M4",
+    peranan: "Anda ialah pengulas jurnal yang teliti dan adil dalam [bidang].",
+    konteks: "Berikut abstrak awam atau rekaan untuk latihan (bukan manuskrip sulit): [tampal abstrak]. Sasaran jurnal: [jenis jurnal].",
+    tugasan: "Lakukan semakan tiruan: nilai hujah utama, bukti, struktur dan gaya. Kenal pasti tiga kelemahan terbesar.",
+    format: "Ringkasan satu perenggan, jadual (isu, bukti daripada teks, cadangan pembetulan), kemudian keputusan cadangan (terima, semak semula kecil, semak semula besar, tolak).",
+    kekangan: "Rujuk hanya teks yang diberikan. Jangan menambah kajian luar. Nada tegas tetapi konstruktif. Nyatakan apa yang tidak dapat dinilai daripada abstrak sahaja."
+  }
+];
+
+const AGENT_PROMPTS = [
+  {
+    id: "AG1", group: "Ejen dan Gem", title: "Tugasan ejen: nota mesyuarat kepada jadual tindakan", mod: "M6 dan M7",
+    peranan: "Anda ialah pembantu tadbir yang teliti.",
+    konteks: "Folder ini mengandungi empat nota mesyuarat rekaan untuk demo. Tiada data sebenar.",
+    tugasan: "Baca semua nota, kumpulkan semua tindakan susulan ke dalam satu jadual (tindakan, penanggungjawab, tarikh akhir, fail sumber) dan sediakan satu draf e-mel peringatan yang ringkas.",
+    format: "Satu fail jadual dan satu fail draf e-mel, disimpan dalam folder baharu bernama Hasil.",
+    kekangan: "Jangan padam atau ubah fail asal. Tulis TIDAK DINYATAKAN jika penanggungjawab atau tarikh tiada. Tunjukkan rancangan anda dan tunggu kelulusan saya sebelum mengubah atau mencipta fail."
+  },
+  {
+    id: "GEM1", group: "Ejen dan Gem", title: "Arahan tetap untuk Gem pembantu e-mel rasmi", mod: "M8",
+    peranan: "Anda ialah pembantu tadbir yang mahir menulis e-mel rasmi Bahasa Melayu untuk pensyarah dan staf universiti.",
+    konteks: "Pengguna akan memberi nota kasar tanpa data peribadi yang tidak perlu. Penerima biasanya pentadbir atau rakan sekerja.",
+    tugasan: "Tukar nota kasar kepada draf e-mel rasmi yang menyatakan tujuan, permintaan dan tarikh tindakan.",
+    format: "Baris subjek, salam, tiga perenggan pendek, penutup dan ruang tandatangan.",
+    kekangan: "Nada sopan dan tegas. Maksimum 150 perkataan. Jangan menambah fakta, nama atau tarikh yang tidak diberi. Jika maklumat penting tiada, tanya satu soalan sebelum menulis."
+  },
+  {
+    id: "CODE1", group: "Ejen dan Gem", title: "Tugasan pengekodan: CV rekaan kepada laman web ringkas", mod: "M9 dan M10",
+    peranan: "Anda ialah pembangun web yang teliti dan suka kod yang ringkas.",
+    konteks: "Folder ini mengandungi cv-contoh.md, iaitu CV rekaan. Saya bukan pengaturcara dan mahu satu laman web peribadi yang ringkas.",
+    tugasan: "Bina satu fail index.html yang memaparkan nama, jawatan, pendidikan dan penerbitan daripada cv-contoh.md.",
+    format: "Satu fail HTML dengan CSS di dalamnya, tanpa perpustakaan luar, yang boleh dibuka terus dalam pelayar.",
+    kekangan: "Guna hanya maklumat dalam CV. Jangan pasang pakej dan jangan ubah fail lain. Tunjukkan rancangan sebelum bermula. Terangkan apa yang anda buat dalam tiga ayat mudah."
+  }
+];
+
+const SCRIPT_OPEN = "Assalamualaikum dan selamat malam. Terima kasih kerana hadir. Saya Murtadha dari Fakulti Komputeran. Malam ini kita bercakap tentang satu perkara: bagaimana menjadikan AI sebagai pembantu, bukan pengganti. Ada antara kita yang sudah menggunakannya setiap hari, ada yang belum pernah cuba. Kedua-duanya tidak mengapa. Sesi ini kebanyakannya demo langsung. Empat belas minit pertama ialah slaid, kemudian saya terus menunjukkan Claude, ChatGPT dan Gemini, ruang kerja ejen seperti Claude Cowork, ChatGPT Work dan Gemini Gem, dan akhir sekali alat pengekodan. Semua data ialah rekaan. Kadangkala hasilnya berbeza atau demo gagal, dan itu sebahagian daripada pelajaran. AI cekap, tetapi ia tidak boleh dipercayai sepenuhnya: ia boleh menulis dengan yakin sambil tersilap. Jadi kita yang mengarah, kita yang menyemak, dan kita yang bertanggungjawab. Sila taip soalan dalam chat pada bila-bila masa. Baik, kita mulakan.";
+
+const SCRIPT_CLOSE = "Kita sudah sampai ke penghujung. Kalau anda hanya ingat tiga perkara, ingatlah ini. Pertama, arah dengan jelas: peranan, konteks, tugasan, format dan kekangan. Kedua, semak fakta, angka, rujukan dan kod sebelum menggunakannya, kerana AI boleh tersilap dengan yakin. Ketiga, lindungi data dan kawal akses: jangan muat naik apa yang tidak boleh didedahkan, dan rujuk garis panduan UTM yang terkini. Esok, pilih satu tugasan kecil yang berulang. Cuba sekali, semak hasilnya, dan baiki arahan anda. Tidak perlu sempurna. Bahan webinar dan semua prompt akan dikongsi dalam chat. Terima kasih kepada Institusi Pembangunan Felo kerana menganjurkan, dan kepada semua yang menemani saya malam ini. Ingat: AI membantu, anda yang memutuskan. Selamat malam.";
+
+const QA = [
+  { q: "Adakah AI akan menggantikan pensyarah dan staf pentadbiran?",
+    a: "Saya tidak dapat meramal masa depan dan tidak mahu menjanjikan apa-apa. Yang boleh saya katakan: AI hari ini menyediakan draf, tetapi tidak menanggung akibat keputusan. Tanggungjawab, pertimbangan dan hubungan dengan pelajar dan rakan sekerja kekal kerja manusia. Cara kita melakukan tugasan berulang mungkin berubah." },
+  { q: "Alat AI mana yang paling baik: Claude, ChatGPT atau Gemini?",
+    a: "Bergantung pada tugasan dan akses anda. Malam ini kita menggunakan prompt yang sama pada ketiga-tiganya supaya anda boleh membandingkan sendiri. Cuba satu tugasan sebenar pada dua alat dan semak hasilnya. Ciri, had penggunaan dan harga berubah dari semasa ke semasa, jadi PERLU SEMAK pada laman rasmi setiap alat." },
+  { q: "Adakah data yang saya taip digunakan untuk melatih model, dan bolehkah saya memuat naik dokumen dalaman?",
+    a: "Bahagian pertama bergantung pada alat, jenis akaun dan tetapan, dan saya tidak mahu meneka. PERLU SEMAK terma dan tetapan privasi rasmi alat yang anda guna. Untuk bahagian kedua, sebagai amalan, tidak ke alat awam kecuali anda dibenarkan. Gantikan nama dengan kod, buang maklumat sensitif atau guna dokumen awam. Untuk dasar UTM, [semak garis panduan UTM terkini]." },
+  { q: "Bagaimana saya tahu AI sedang mereka fakta?",
+    a: "Anda tidak boleh tahu daripada nada jawapannya, kerana ia boleh yakin walaupun salah. Semak fakta penting dengan sumber asal seperti pangkalan data, DOI atau dokumen rasmi, seperti yang kita lakukan dalam modul 5. Anda boleh minta AI menyatakan tahap kepastiannya, tetapi itu bukan pengesahan." },
+  { q: "Bolehkah alat pengesan AI dipercayai untuk memeriksa tugasan pelajar?",
+    a: "Saya tidak akan menjadikannya bukti tunggal, kerana pengesan juga boleh tersilap. PERLU SEMAK dasar universiti. Pendekatan yang lebih kukuh ialah mereka tugasan yang menilai proses, seperti draf berperingkat, pembentangan lisan dan refleksi." },
+  { q: "Perlukah saya mengisytiharkan penggunaan AI dalam artikel atau tesis?",
+    a: "Bergantung pada dasar penerbit, jurnal atau universiti, dan dasarnya berbeza. PERLU SEMAK garis panduan pengarang sebelum menyerahkan. Jika ragu, isytiharkan dengan ringkas. Contoh ayat ada dalam modul 5." },
+  { q: "Bolehkah saya menggunakan AI untuk menyemak manuskrip yang diserahkan kepada saya untuk semakan sulit?",
+    a: "Saya tidak memuat naik manuskrip semakan sulit ke alat awam. Penerbit mempunyai peraturan sendiri, jadi PERLU SEMAK dasar jurnal berkenaan. Untuk latihan, guna abstrak awam atau rekaan seperti dalam modul 4." },
+  { q: "Selamatkah memberi Claude Cowork, ChatGPT Work atau Codex akses kepada fail dan e-mel saya?",
+    a: "Selamat atau tidak bergantung pada apa yang anda benarkan. Mulakan dengan folder rekaan atau salinan, bukan seluruh komputer atau e-mel sebenar. Baca rancangan dan langkah yang diminta untuk kelulusan, semak fail yang diubah dan simpan salinan asal. Untuk data sensitif, ikut [semak garis panduan UTM terkini]. Kawalan akses dan kelulusan sebenar setiap alat PERLU SEMAK dalam dokumentasi rasmi." },
+  { q: "Adakah saya perlu tahu pengaturcaraan untuk menggunakan Claude Code atau Codex?",
+    a: "Anda boleh mencuba tugasan mudah tanpa banyak asas, seperti laman web ringkas dalam demo tadi, tetapi anda tetap perlu memahami cukup untuk menyemak hasilnya. Kod yang berjalan belum tentu betul atau selamat. Jika hasilnya akan digunakan secara sebenar, minta bantuan rakan yang mahir atau pelajari asasnya dahulu." },
+  { q: "Apakah beza Gem dengan menampal prompt setiap kali?",
+    a: "Gem menyimpan arahan tetap dan fail rujukan supaya anda tidak menaip semula. Ia menjimatkan masa untuk tugasan berulang, tetapi hasilnya masih perlu disemak. Jika Gem dikongsi, penerima mungkin boleh melihat arahannya, jadi jangan letakkan maklumat sensitif. Had dan ciri Gem PERLU SEMAK dalam dokumentasi rasmi Google." }
+];
+
+const CHECKLIST = [
+  { title: "Sehari sebelum (hari ini, 21 September 2026)", items: [
+    "Larikan setiap modul 1 hingga 10 sekurang-kurangnya sekali pada alat yang akan digunakan",
+    "Simpan tangkapan skrin hasil yang baik sebagai slaid sandaran tersembunyi B1 hingga B10, dan rakam video pendek untuk modul 9 dan 10",
+    "Sediakan Folder Contoh IPF (empat nota rekaan) untuk modul 6 dan 7, dan folder kosong berisi cv-contoh.md untuk modul 9 dan 10",
+    "Pasang dan uji aplikasi: Claude (Cowork), aplikasi desktop ChatGPT (Work dan Codex), Claude Code. PERLU SEMAK sama ada akaun anda mempunyai akses",
+    "Sediakan satu Gem yang sudah siap sebagai sandaran untuk modul 8",
+    "Matikan atau kosongkan memori dan personalisasi, atau guna sembang sementara jika tersedia, supaya maklumat peribadi tidak muncul dalam hasil demo",
+    "Isi ruang letak [semak garis panduan UTM terkini] dan selesaikan semua penanda PERLU SEMAK dalam bahagian 9",
+    "Sahkan dengan IPF: pautan Meet, giliran moderator untuk mengumpul soalan chat, dasar rakaman, logo rasmi"
+  ]},
+  { title: "1 jam sebelum", items: [
+    "Log masuk ke semua alat dan buka satu sembang baharu pada setiap satu",
+    "Guna profil pelayar berasingan tanpa bookmark dan sejarah peribadi",
+    "Susun tab dan tetingkap mengikut turutan demo: Claude, ChatGPT, Gemini, dua aplikasi ejen, terminal",
+    "Tutup e-mel, aplikasi mesej dan semua tab peribadi. Pastikan kunci API, kata laluan dan fail sensitif tidak terbuka",
+    "Pastikan aplikasi ejen hanya boleh melihat folder rekaan dan tiada sambungan ke e-mel, kalendar atau Drive sebenar",
+    "Aktifkan mod Jangan Ganggu untuk semua notifikasi",
+    "Sediakan satu fail teks yang mengandungi semua prompt dan data rekaan untuk disalin dengan cepat",
+    "Sediakan hotspot telefon sebagai rangkaian sandaran"
+  ]},
+  { title: "15 minit sebelum", items: [
+    "Masuk bilik Meet dan uji audio serta kamera bersama moderator",
+    "Uji kongsi skrin, termasuk aplikasi desktop dan terminal: kongsi satu tetingkap, bukan seluruh skrin, jika boleh",
+    "Besarkan saiz fon terminal dan pelayar, dan semak kebolehbacaan pada paparan kecil (slaid tidak kurang 24 pt)",
+    "Buka slaid sandaran tersembunyi dan pastikan boleh dilompat dengan pantas",
+    "Ulang semak sekali lagi: notifikasi ditutup, tab peribadi ditutup, kunci API tidak kelihatan",
+    "Sediakan pengatur masa untuk penanda 14, 19, 26, 32, 40, 46, 51, 56, 66, 73 dan 80 minit",
+    "Peraturan demo: jika tiada respons dalam 30 saat, jangan tunggu, terus guna sandaran"
+  ]}
+];
+
+const SEMAK = [
+  { item: "Dasar UTM tentang penggunaan AI dan perlindungan data", di: "Slaid 6 dan 10; Q&A 3 dan 8", sumber: "Garis panduan rasmi UTM yang terkini. Ruang letak: [semak garis panduan UTM terkini]" },
+  { item: "Butiran Akta Perlindungan Data Peribadi 2010", di: "Slaid 6", sumber: "Teks akta dan laman rasmi agensi perlindungan data peribadi Malaysia (semak pautan semasa)" },
+  { item: "Terma privasi dan penggunaan data bagi setiap alat yang didemo", di: "Slaid 6; modul 1 hingga 10; Q&A 3", sumber: "Terma perkhidmatan dan dasar privasi rasmi setiap alat" },
+  { item: "Ketersediaan, pelan dan had penggunaan: Claude Cowork, ChatGPT Work, Gemini Gem, Claude Code, Codex", di: "Slaid 4; modul 6 hingga 10; Q&A 2", sumber: "Dokumentasi dan laman harga rasmi setiap alat. ChatGPT Work dilaporkan dilancarkan secara berperingkat, jadi sahkan akses akaun anda sebelum sesi" },
+  { item: "Kawalan akses, kelulusan dan keupayaan sebenar setiap ejen", di: "Slaid 7; modul 6, 7, 9 dan 10; Q&A 8", sumber: "Dokumentasi rasmi setiap alat dan latihan sebenar sebelum sesi" },
+  { item: "Had dan cara berkongsi Gem, termasuk siapa boleh melihat arahan", di: "Modul 8; Q&A 10", sumber: "Gemini Apps Help (Google)" },
+  { item: "Dasar pengisytiharan penggunaan AI oleh penerbit dan jurnal", di: "Modul 5; Q&A 6 dan 7", sumber: "Garis panduan pengarang dan pengulas bagi jurnal atau penerbit berkenaan" },
+  { item: "Dasar universiti tentang pengesan AI dan penilaian pelajar", di: "Q&A 5", sumber: "Garis panduan akademik UTM yang terkini" },
+  { item: "Dasar rakaman dan perkongsian bahan webinar", di: "Slaid 9 dan 10", sumber: "Penganjur (IPF)" },
+  { item: "Kebenaran menggunakan logo penganjur pada slaid", di: "Slaid 1", sumber: "Penganjur (IPF)" }
+];
+/*OTHER_END*/
+
+/* ---------- Render logic ---------- */
+(function () {
+  "use strict";
+
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  function esc(t) {
+    return String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function words(t) { return String(t).trim().split(/\s+/).length; }
+  function fmtSec(s) {
+    var m = Math.floor(s / 60), r = s % 60;
+    return r ? (m + " min " + r + " saat") : (m + " min");
+  }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  var segById = {};
+  SEGMENTS.forEach(function (g) { segById[g.id] = g; });
+  var promptById = {};
+  PROMPTS.concat(AGENT_PROMPTS).forEach(function (p) { promptById[p.id] = p; });
+
+  /* ---- Timeline ---- */
+  var segColors = {
+    s0: ["#b8ead7", "#0e2e28"], s1: ["#2f7d63", "#ffffff"], s2: ["#1d563d", "#ffffff"],
+    s3: ["#153b34", "#ffffff"], s4: ["#ddf3b9", "#0e2e28"]
+  };
+  function firstTarget(g) {
+    var m = MODULES.filter(function (x) { return x.seg === g.id; })[0];
+    if (m) return "#modul-" + m.id;
+    var sl = SLIDES.filter(function (x) { return x.seg === g.id; })[0];
+    return "#slaid-" + sl.n;
+  }
+  function modLabel(m) { return m.id === "Q" ? "Q&A" : m.id; }
+  function shortTitle(m) { return m.t.split(":")[0]; }
+
+  (function timeline() {
+    var bar = $("#tl-bar");
+    bar.innerHTML = SEGMENTS.map(function (g) {
+      var d = g.to - g.from, c = segColors[g.id];
+      return '<div class="tl-seg" style="flex:' + d + ';background:' + c[0] + ';color:' + c[1] + '" title="' + esc(g.name) + ': ' + d + ' minit">' + d + '</div>';
+    }).join("");
+    var rows = SEGMENTS.map(function (g) {
+      var c = segColors[g.id];
+      return '<tr><td><span class="sw" style="background:' + c[0] + '"></span>' + g.from + ' hingga ' + g.to + '</td>' +
+        '<td><a href="' + firstTarget(g) + '"><strong>' + esc(g.name) + '</strong></a></td>' +
+        '<td>' + esc(g.content) + '</td><td>' + esc(g.demo) + '</td></tr>';
+    }).join("");
+    $("#tl-table").innerHTML = '<thead><tr><th>Minit</th><th>Bahagian</th><th>Kandungan</th><th>Rujukan</th></tr></thead><tbody>' + rows + '</tbody>';
+    var mrows = MODULES.map(function (m) {
+      return '<tr><td><a href="#modul-' + m.id + '">' + modLabel(m) + '</a></td><td>' + m.from + ' hingga ' + m.to + ' (' + (m.to - m.from) + ' min)</td>' +
+        '<td>' + (m.tools.length ? esc(m.tools.join(", ")) : "Tiada") + '</td><td>' + esc(m.t) + '</td></tr>';
+    }).join("");
+    $("#mod-table").innerHTML = '<thead><tr><th>Modul</th><th>Minit</th><th>Alat</th><th>Tugasan</th></tr></thead><tbody>' + mrows + '</tbody>';
+  })();
+
+  /* ---- Sidebar sub-links ---- */
+  $("#toc-seg").innerHTML = MODULES.map(function (m) {
+    return '<li><a href="#modul-' + m.id + '">' + (m.id === "Q" ? "" : m.id + " ") + esc(shortTitle(m)) + '</a></li>';
+  }).join("");
+
+  /* ---- Code block helper ---- */
+  var copyCount = 0;
+  function codeBlock(label, plainText, htmlText) {
+    copyCount++;
+    var id = "cb" + copyCount;
+    return '<div class="codewrap"><span class="codelabel">' + esc(label) + '</span>' +
+      '<button type="button" class="copy" data-copy-id="' + id + '">Salin</button>' +
+      '<pre id="' + id + '" data-plain="' + esc(plainText) + '">' + (htmlText || esc(plainText)) + '</pre></div>';
+  }
+  function keyed(text) {
+    return text.split("\n").map(function (ln) {
+      var m = ln.match(/^(Peranan|Konteks|Tugasan|Format|Kekangan):\s?(.*)$/);
+      return m ? '<span class="k">' + m[1] + ':</span> ' + esc(m[2]) : esc(ln);
+    }).join("\n");
+  }
+
+  /* ---- Slides ---- */
+  (function slides() {
+    var out = SLIDES.map(function (s) {
+      var g = segById[s.seg];
+      var cover = (s.n === 1 || s.n === 10) ? " cover" : "";
+      var tag = s.tag ? '<span class="tg">' + s.tag + '</span>' : "";
+      var thumb = '<div class="thumb-wrap"><div class="thumb' + cover + '">' + tag +
+        '<div class="tt">' + esc(s.t) + '</div><ul>' + s.pts.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join("") + '</ul></div></div>' +
+        '<p class="thumb-note">Pratonton reka letak slaid ' + s.n + '</p>';
+      var meta = '<div class="slide-meta"><span class="chip">' + fmtSec(s.sec) + '</span>' +
+        '<span class="chip">' + esc(g.name) + '</span>' +
+        (s.tag ? '<span class="chip demo">' + s.tag + '</span>' : "") +
+        '<span class="wc">Nota: ' + words(s.note) + ' perkataan</span></div>';
+      var d = '<div class="blk"><h5>Cadangan visual</h5><p>' + esc(s.vis) + '</p></div>' +
+        '<div class="blk"><h5>Nota pembentang</h5><p>' + esc(s.note) + '</p></div>';
+      return '<article class="slide" id="slaid-' + s.n + '">' +
+        '<div class="slide-head"><span class="sn">' + s.n + '</span><h4>' + esc(s.t) + '</h4></div>' + meta +
+        '<div class="slide-grid"><div class="thumb-col">' + thumb + '</div><div class="detail">' + d + '</div></div></article>';
+    });
+    $("#slide-list").innerHTML = out.join("");
+  })();
+
+  /* ---- Modules ---- */
+  (function modules() {
+    var out = [], last = null;
+    MODULES.forEach(function (m) {
+      var g = segById[m.seg];
+      if (m.seg !== last) {
+        last = m.seg;
+        out.push('<div class="seg-h" id="seg-' + g.id + '"><h3>' + esc(g.name) + '</h3><small>Minit ' + g.from + ' hingga ' + g.to + '</small></div>');
+      }
+      var meta = '<div class="slide-meta"><span class="chip">Minit ' + m.from + ' hingga ' + m.to + ' (' + (m.to - m.from) + ' min)</span>' +
+        (m.tag ? '<span class="chip demo">' + m.tag + '</span>' : "") +
+        m.tools.map(function (t) { return '<span class="chip tool">' + esc(t) + '</span>'; }).join("") + '</div>';
+      var d = '<div class="blk"><h5>Matlamat</h5><p>' + esc(m.goal) + '</p></div>';
+      if (m.prep.length) d += '<div class="blk prep"><h5>Sediakan sebelum</h5><ul>' + m.prep.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") + '</ul></div>';
+      d += '<div class="demo-box"><h5>Langkah</h5><ol>' + m.steps.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") + '</ol>';
+      m.samples.forEach(function (sm) { d += codeBlock(sm.label, sm.text, keyed(sm.text)); });
+      d += '</div>';
+      if (m.promptRef.length) {
+        d += '<div class="blk ref"><h5>Prompt berkaitan</h5><p>' + m.promptRef.map(function (id) {
+          var p = promptById[id]; return '<a href="#prompt-' + id + '">' + id + ': ' + esc(p.title) + '</a>';
+        }).join("<br>") + '</p></div>';
+      }
+      if (m.chat) d += '<div class="blk"><h5>Soalan untuk chat</h5><p>' + esc(m.chat) + '</p></div>';
+      d += '<div class="blk"><h5>Kata-kata pembentang</h5><p>' + esc(m.note) + '</p></div>';
+      d += '<p class="backup"><strong>Sandaran.</strong> ' + esc(m.backup) + '</p>';
+      out.push('<article class="slide mod" id="modul-' + m.id + '"><div class="slide-head"><span class="sn">' + modLabel(m) + '</span><h4>' + esc(m.t) + '</h4></div>' +
+        meta + '<div class="detail">' + d + '</div></article>');
+    });
+    $("#module-list").innerHTML = out.join("");
+  })();
+
+  /* ---- Prompts ---- */
+  (function prompts() {
+    var html = "";
+    function block(p) {
+      var plain = "Peranan: " + p.peranan + "\nKonteks: " + p.konteks + "\nTugasan: " + p.tugasan + "\nFormat: " + p.format + "\nKekangan: " + p.kekangan;
+      var use;
+      if (!p.mod) use = "Bahan tambahan, tidak didemo langsung";
+      else use = "Digunakan dalam " + p.mod.split(" dan ").map(function (id) { return '<a href="#modul-' + id + '">modul ' + id.replace("M", "") + '</a>'; }).join(" dan ");
+      return '<div class="pblock" id="prompt-' + p.id + '"><h4>' + p.id + ': ' + esc(p.title) + '</h4>' +
+        '<p class="sub">' + use + '</p>' + codeBlock(p.id + " · " + p.title, plain, keyed(plain)) + '</div>';
+    }
+    ["Akademik", "Pentadbiran", "Penyelidikan"].forEach(function (gr) {
+      html += '<h3>' + gr + '</h3>';
+      PROMPTS.filter(function (p) { return p.group === gr; }).forEach(function (p) { html += block(p); });
+    });
+    html += '<h3>Ejen dan Gem</h3><p class="sub">Tiga prompt tambahan untuk modul 6 hingga 10. Prompt GEM1 ditampal sebagai Instructions dalam Gem.</p>';
+    AGENT_PROMPTS.forEach(function (p) { html += block(p); });
+    $("#prompt-list").innerHTML = html;
+  })();
+
+  /* ---- Scripts ---- */
+  $("#script-open").textContent = SCRIPT_OPEN;
+  $("#script-close").textContent = SCRIPT_CLOSE;
+  $("#wc-open").textContent = words(SCRIPT_OPEN) + " perkataan, kira-kira 60 saat pada kelajuan bertutur biasa";
+  $("#wc-close").textContent = words(SCRIPT_CLOSE) + " perkataan, kira-kira 60 saat pada kelajuan bertutur biasa";
+
+  /* ---- Q&A ---- */
+  $("#qa-list").innerHTML = QA.map(function (x, i) {
+    return '<details class="qa"><summary><span>' + (i + 1) + '. ' + esc(x.q) + '</span></summary><p>' + esc(x.a) + '</p></details>';
+  }).join("");
+
+  /* ---- Checklists ---- */
+  (function checklists() {
+    var saved = {};
+    try { saved = JSON.parse(store("webinar-ai-chk") || "{}") || {}; } catch (e) { saved = {}; }
+    var html = "";
+    CHECKLIST.forEach(function (g, gi) {
+      html += '<fieldset class="chk-group"><legend>' + esc(g.title) + '</legend><p class="chk-count" data-g="' + gi + '"></p>' +
+        g.items.map(function (it, ii) {
+          var key = gi + "-" + ii;
+          return '<label class="chk"><input type="checkbox" data-k="' + key + '"' + (saved[key] ? " checked" : "") + '><span>' + esc(it) + '</span></label>';
+        }).join("") + '</fieldset>';
+    });
+    $("#checklists").innerHTML = html;
+    function upd() {
+      CHECKLIST.forEach(function (g, gi) {
+        var boxes = $$('#checklists input[data-k^="' + gi + '-"]');
+        var n = boxes.filter(function (b) { return b.checked; }).length;
+        $('.chk-count[data-g="' + gi + '"]').textContent = n + " daripada " + boxes.length + " siap";
+      });
+    }
+    upd();
+    $("#checklists").addEventListener("change", function (e) {
+      var b = e.target;
+      if (b.dataset && b.dataset.k) {
+        if (b.checked) saved[b.dataset.k] = 1; else delete saved[b.dataset.k];
+        store("webinar-ai-chk", JSON.stringify(saved));
+        upd();
+      }
+    });
+  })();
+
+  /* ---- Backup and semak tables ---- */
+  (function tables() {
+    var rows = MODULES.map(function (m) {
+      var b = m.id === "Q" ? "Sandaran soal jawab" : "B" + m.id.replace("M", "");
+      return '<tr><td>' + b + '</td><td><a href="#modul-' + m.id + '">' + modLabel(m) + '</a>: ' + esc(m.t) + '</td><td>' + esc(m.backup) + '</td></tr>';
+    }).join("");
+    $("#backup-table").innerHTML = '<thead><tr><th>Slaid</th><th>Modul</th><th>Jika gagal</th></tr></thead><tbody>' + rows + '</tbody>';
+    $("#semak-table").innerHTML = '<thead><tr><th>Perkara PERLU SEMAK</th><th>Digunakan di</th><th>Sumber rasmi</th></tr></thead><tbody>' +
+      SEMAK.map(function (x) { return '<tr><td>' + esc(x.item) + '</td><td>' + esc(x.di) + '</td><td>' + esc(x.sumber) + '</td></tr>'; }).join("") + '</tbody>';
+  })();
+
+  /* ---- Swatches ---- */
+  $("#swatches").innerHTML = [
+    ["Forest", "#153b34", "Latar slaid"], ["Forest gelap", "#0e2e28", "Latar kedua"],
+    ["Mint", "#b8ead7", "Aksen lembut"], ["Lime", "#ddf3b9", "Penanda dan tanda demo"],
+    ["Maroon", "#8f163f", "Amaran dan risiko"], ["Kertas", "#f8faf7", "Latar dokumen"],
+    ["Tinta", "#172b27", "Teks pada latar cerah"]
+  ].map(function (c) {
+    return '<div class="swatch"><i style="background:' + c[1] + '"></i><b>' + c[0] + '</b><span>' + c[1] + '</span><span style="font-family:inherit;padding-top:0">' + c[2] + '</span></div>';
+  }).join("");
+
+  /* ---- Copy handlers ---- */
+  function copyText(text, btn) {
+    var done = function () {
+      var old = btn.textContent;
+      btn.textContent = "Disalin";
+      setTimeout(function () { btn.textContent = old; }, 1400);
+    };
+    var fallback = function () {
+      var ta = document.createElement("textarea");
+      ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); done(); } catch (e) { btn.textContent = "Tekan Ctrl+C"; }
+      document.body.removeChild(ta);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else { fallback(); }
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-copy-id]");
+    if (!b) return;
+    var el = document.getElementById(b.dataset.copyId);
+    if (!el) return;
+    copyText(el.dataset.plain || el.textContent, b);
+  });
+
+  /* ---- Scroll spy and progress ---- */
+  var tocLinks = $$(".toc a[href^='#']").filter(function (a) { return a.getAttribute("href") !== "#gambaran"; });
+  var targets = tocLinks.map(function (a) { return document.getElementById(a.getAttribute("href").slice(1)); });
+  var bar = $("#progress i"), ticking = false;
+  function onScroll() {
+    ticking = false;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? Math.min(100, window.scrollY / h * 100) : 0) + "%";
+    var cur = -1;
+    targets.forEach(function (t, i) { if (t && t.getBoundingClientRect().top <= 140) cur = i; });
+    tocLinks.forEach(function (a, i) { a.classList.toggle("active", i === cur); });
+  }
+  window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  window.addEventListener("resize", onScroll);
+  onScroll();
+})();
+</script>
+</body>
+</html>
