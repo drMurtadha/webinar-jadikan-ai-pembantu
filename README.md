@@ -4,7 +4,7 @@ Bahan webinar anjuran Institusi Pembangunan Felo (IPF), UTM, pada 22 September 2
 
 **[Lawati laman interaktif](https://drmurtadha.github.io/webinar-jadikan-ai-pembantu/)** · [Baca fail Markdown](webinar-jadikan-ai-pembantu.md)
 
-Webinar ini menunjukkan cara menjadikan AI sebagai pembantu dalam kerja akademik, pentadbiran dan penyelidikan. Empat belas minit pertama ialah slaid, dan selebihnya ialah demo langsung pada Claude, ChatGPT dan Gemini, ruang kerja ejen (Claude Cowork, ChatGPT Work, Gemini Gem) serta alat pengekodan (Claude Code, ChatGPT Codex).
+Webinar ini menunjukkan cara menjadikan AI sebagai pembantu dalam kerja akademik, pentadbiran dan penyelidikan. Empat belas minit pertama ialah slaid, dan selebihnya ialah demo langsung pada Claude, ChatGPT dan Gemini, ruang kerja ejen (Claude Cowork, ChatGPT Work, Gemini Gem) serta alat pengekodan (Claude Code, ChatGPT Codex). Halaman interaktif menyediakan pilihan tema warna dan mod cerah atau gelap.
 
 Kandungan: 10 slaid, 10 modul demo langsung, 12 prompt siap guna, skrip pembukaan dan penutup, 10 soalan Q&A, senarai semak persediaan dan pelan sandaran.
 
