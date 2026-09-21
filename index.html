@@ -7,21 +7,21 @@
 <meta name="description" content="Slaid, prompt, skrip, soalan Q&A dan senarai semak untuk webinar Jadikan AI Pembantu Anda, IPF UTM, 22 September 2026.">
 <style>
 :root{
-  --ink:#172b27;--muted:#56695f;--forest:#153b34;--forest-2:#0e2e28;--mint:#b8ead7;--lime:#ddf3b9;--paper:#f8faf7;--line:#dce6de;--maroon:#8f163f;
-  --surface:#ffffff;--head:#153b34;--th:#eaf4eb;--thc:#1d563d;--code:#132620;--code-ink:#e1e4e8;--accent:#14b88a;--link:#1a6b51;--soft:#eef5ef;--warn-bg:#fbeef2;--shadow:rgba(24,63,40,.07);
+  --ink:#1b1f3b;--muted:#565d78;--deep:#14204d;--deep-2:#0d1636;--tint:#cfd8ff;--gold:#ffd166;--paper:#f6f7fb;--line:#dde1ef;--alert:#b4233c;
+  --surface:#ffffff;--head:#14204d;--th:#e8ebf9;--thc:#1f2f7a;--code:#0f1530;--code-ink:#e4e8fb;--accent:#e8a200;--link:#2a4bbf;--soft:#eef0fa;--warn-bg:#fdeef0;--demo-bg:#fff6dc;--demo-line:#e6c76a;--shadow:rgba(20,32,77,.08);
   color-scheme:light dark;
   box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--ink:#e2eee8;--muted:#9db5ab;--paper:#0c1916;--line:#23413a;--surface:#122622;--head:#d3f1e2;--th:#173229;--thc:#b8ead7;--code:#08120f;--link:#7fd8b5;--soft:#142a25;--warn-bg:#2a1620;--shadow:rgba(0,0,0,.35)}
+  :root:not([data-theme="light"]){--ink:#e7eaf8;--muted:#a5adcf;--paper:#0b1030;--line:#242c59;--surface:#121a42;--head:#dfe5ff;--th:#1a2350;--thc:#cfd8ff;--code:#070b22;--link:#9db4ff;--soft:#141c47;--warn-bg:#2b1420;--demo-bg:#1a2050;--demo-line:#6b5a1e;--shadow:rgba(0,0,0,.4)}
 }
-:root[data-theme="dark"]{--ink:#e2eee8;--muted:#9db5ab;--paper:#0c1916;--line:#23413a;--surface:#122622;--head:#d3f1e2;--th:#173229;--thc:#b8ead7;--code:#08120f;--link:#7fd8b5;--soft:#142a25;--warn-bg:#2a1620;--shadow:rgba(0,0,0,.35)}
+:root[data-theme="dark"]{--ink:#e7eaf8;--muted:#a5adcf;--paper:#0b1030;--line:#242c59;--surface:#121a42;--head:#dfe5ff;--th:#1a2350;--thc:#cfd8ff;--code:#070b22;--link:#9db4ff;--soft:#141c47;--warn-bg:#2b1420;--demo-bg:#1a2050;--demo-line:#6b5a1e;--shadow:rgba(0,0,0,.4)}
 
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:calc(24px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:"Avenir Next","Segoe UI",Arial,sans-serif;font-size:16px;line-height:1.6}
 a{color:var(--link)}
-a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--link);outline-offset:2px;border-radius:4px}
 h1,h2,h3,h4,h5{margin:0;color:var(--head);font-weight:780;line-height:1.1}
 p{margin:0 0 1em}
 code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
@@ -31,37 +31,37 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
 
 .site-header{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px;padding:12px clamp(16px,4.3vw,61px);background:var(--surface);border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
-.badge{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:var(--maroon);color:#fff;font-size:12.5px;font-weight:800;letter-spacing:.02em}
+.badge{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:var(--gold);color:var(--deep);font-size:12.5px;font-weight:800;letter-spacing:.02em}
 .brand-text{font-weight:780;font-size:15px;line-height:1.15;letter-spacing:-.01em}
 .top-nav{display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);font-size:14.5px;font-weight:700}
 .top-nav a{color:var(--ink);text-decoration:none}
 .top-nav a:hover{text-decoration:underline}
 .top-nav .btn-outline{border:1px solid var(--line);padding:11px 18px;border-radius:9px;background:var(--surface)}
 
-.hero{background:var(--forest);color:#fff;padding:clamp(40px,7vw,95px) clamp(20px,5vw,61px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,64px);align-items:center}
-.pill{display:inline-flex;align-items:center;gap:10px;margin:0 0 26px;padding:7px 14px;border-radius:99px;background:rgba(184,234,215,.1);color:#dff5ea;font-size:13.5px;font-weight:700}
-.pill i{width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(184,234,215,.2)}
+.hero{background:var(--deep);color:#fff;padding:clamp(40px,7vw,95px) clamp(20px,5vw,61px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,64px);align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;margin:0 0 26px;padding:7px 14px;border-radius:99px;background:rgba(207,216,255,.12);color:#e3e9ff;font-size:13.5px;font-weight:700}
+.pill i{width:9px;height:9px;border-radius:50%;background:var(--tint);box-shadow:0 0 0 4px rgba(207,216,255,.2)}
 .hero h1{color:#fff;font-size:clamp(40px,6.1vw,68px);letter-spacing:-.055em;line-height:1.02;margin-bottom:26px}
-.lead{max-width:34em;font-size:clamp(16px,1.6vw,19px);line-height:1.6;color:#d4e8df;margin-bottom:34px}
+.lead{max-width:34em;font-size:clamp(16px,1.6vw,19px);line-height:1.6;color:#d5dcf5;margin-bottom:34px}
 .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:22px}
-.btn-lime{display:inline-flex;align-items:center;gap:26px;padding:16px 22px;border-radius:9px;background:var(--lime);color:var(--forest);font-weight:780;text-decoration:none}
-.btn-lime:hover{background:#e8f8cc}
+.btn-gold{display:inline-flex;align-items:center;gap:26px;padding:16px 22px;border-radius:9px;background:var(--gold);color:var(--deep);font-weight:780;text-decoration:none}
+.btn-gold:hover{background:#ffdf94}
 .btn-link{color:#fff;font-weight:700;text-decoration:none;border-bottom:2px solid rgba(255,255,255,.5);padding-bottom:3px}
 .btn-link:hover{border-bottom-color:#fff}
 
-.flow{margin:0;padding:24px;border-radius:26px;border:1px solid rgba(184,234,215,.28);background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02))}
-.flow figcaption{font-size:13.5px;font-weight:700;color:#dff5ea;margin-bottom:24px}
+.flow{margin:0;padding:24px;border-radius:26px;border:1px solid rgba(207,216,255,.28);background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02))}
+.flow figcaption{font-size:13.5px;font-weight:700;color:#e3e9ff;margin-bottom:24px}
 .flow-grid{display:grid;grid-template-columns:minmax(0,1.25fr) 22px minmax(0,1fr) 22px minmax(0,.8fr);align-items:center}
 .flow-in{display:grid;gap:14px}
-.node{background:#f0faf5;color:var(--forest);border-radius:10px;padding:12px 14px;box-shadow:0 6px 18px rgba(0,0,0,.14)}
+.node{background:#f1f4ff;color:var(--deep);border-radius:10px;padding:12px 14px;box-shadow:0 6px 18px rgba(0,0,0,.14)}
 .node b{display:block;font-size:14.5px;line-height:1.2;letter-spacing:-.01em}
-.node small{display:block;margin-top:4px;color:#56695f;font-size:12.5px;line-height:1.3}
-.node.hot{background:var(--lime);border:2px solid #c6e59a;text-align:center;padding:18px 12px}
-.node.hot small{color:#3f5a2b}
+.node small{display:block;margin-top:4px;color:#565d78;font-size:12.5px;line-height:1.3}
+.node.hot{background:var(--gold);border:2px solid #e6b84a;text-align:center;padding:18px 12px}
+.node.hot small{color:#5c4a12}
 .node.out{background:#fff}
-.node.out .dots{display:block;margin-bottom:8px;height:6px;width:24px;background:radial-gradient(circle,#b9c9c1 2.5px,transparent 3px) 0 0/8px 6px repeat-x}
-.line{height:2px;background:rgba(184,234,215,.5)}
-.flow-foot{margin:22px 0 0;font-size:13px;color:#c6ddd2}
+.node.out .dots{display:block;margin-bottom:8px;height:6px;width:24px;background:radial-gradient(circle,#b9c0dd 2.5px,transparent 3px) 0 0/8px 6px repeat-x}
+.line{height:2px;background:rgba(207,216,255,.5)}
+.flow-foot{margin:22px 0 0;font-size:13px;color:#c9d1ef}
 
 .doc{display:grid;grid-template-columns:250px minmax(0,1fr);gap:clamp(28px,4vw,60px);max-width:1320px;margin:0 auto;padding:clamp(32px,5vw,64px) clamp(16px,4.3vw,61px) 96px}
 .toc{position:sticky;top:calc(24px + env(safe-area-inset-top,0px));align-self:start;max-height:calc(100vh - 48px);overflow:auto;font-size:13.5px;line-height:1.35;padding-right:6px}
@@ -86,7 +86,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
 
 .callout{margin:24px 0;padding:16px 20px;border-left:4px solid var(--accent);background:var(--soft);border-radius:0 11px 11px 0}
 .callout p:last-child{margin:0}
-.callout.warn{border-left-color:var(--maroon);background:var(--warn-bg)}
+.callout.warn{border-left-color:var(--alert);background:var(--warn-bg)}
 
 .tablewrap{overflow-x:auto;margin:18px 0 26px;border-radius:8px}
 table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.7px;background:var(--surface)}
@@ -99,28 +99,28 @@ td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
 .tl-cap{font-size:13px;color:var(--muted);margin:0 0 6px}
 
 .chip{display:inline-block;padding:3px 10px;border-radius:99px;font-size:12.5px;font-weight:780;line-height:1.5;border:1px solid var(--line);color:var(--ink);background:var(--surface)}
-.chip.demo{background:var(--lime);border-color:#c6e59a;color:var(--forest)}
+.chip.demo{background:var(--gold);border-color:#e6b84a;color:var(--deep)}
 .chip.tool{background:var(--soft);border-color:var(--line);color:var(--ink)}
-.chip.lain{background:var(--mint);border-color:#9fd8c0;color:var(--forest)}
+.chip.lain{background:var(--tint);border-color:#aebbf0;color:var(--deep)}
 .legend{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 8px}
 
 .seg-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin:64px 0 0}
 .seg-h small{font-size:14px;font-weight:600;color:var(--muted);letter-spacing:0}
 .slide{padding:34px 0 38px;border-top:1px solid var(--line)}
 .slide-head{display:flex;align-items:center;gap:14px;margin-bottom:10px}
-.sn{display:inline-grid;place-items:center;min-width:36px;height:36px;padding:0 8px;border-radius:9px;background:var(--maroon);color:#fff;font-weight:800;font-size:14.5px}
+.sn{display:inline-grid;place-items:center;min-width:36px;height:36px;padding:0 8px;border-radius:9px;background:var(--gold);color:var(--deep);font-weight:800;font-size:14.5px}
 .slide-head h4{font-size:clamp(18px,2vw,22px);letter-spacing:-.03em}
 .slide-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 20px}
 .wc{font-size:13px;color:var(--muted)}
 .slide-grid{display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);gap:clamp(20px,3vw,34px);align-items:start}
 .thumb-col{position:sticky;top:calc(24px + env(safe-area-inset-top,0px))}
 .thumb-wrap{container-type:inline-size}
-.thumb{position:relative;aspect-ratio:16/9;background:var(--forest);color:#fff;border-radius:11px;padding:4cqw 5cqw;display:flex;flex-direction:column;justify-content:center;gap:2cqw;overflow:hidden;box-shadow:0 12px 30px var(--shadow)}
-.thumb .tg{align-self:flex-start;background:var(--lime);color:var(--forest);font-weight:780;font-size:2.6cqw;line-height:1.5;padding:0 2cqw;border-radius:99px}
+.thumb{position:relative;aspect-ratio:16/9;background:var(--deep);color:#fff;border-radius:11px;padding:4cqw 5cqw;display:flex;flex-direction:column;justify-content:center;gap:2cqw;overflow:hidden;box-shadow:0 12px 30px var(--shadow)}
+.thumb .tg{align-self:flex-start;background:var(--gold);color:var(--deep);font-weight:780;font-size:2.6cqw;line-height:1.5;padding:0 2cqw;border-radius:99px}
 .thumb .tt{font-size:4.1cqw;line-height:1.1;font-weight:780;letter-spacing:-.03em;color:#fff}
 .thumb ul{list-style:none;margin:0;padding:0;display:grid;gap:1.2cqw}
 .thumb li{position:relative;padding-left:3.2cqw;margin:0;max-width:none;font-size:2.6cqw;line-height:1.28}
-.thumb li::before{content:"";position:absolute;left:0;top:.6em;width:1.2cqw;height:1.2cqw;border-radius:50%;background:var(--lime)}
+.thumb li::before{content:"";position:absolute;left:0;top:.6em;width:1.2cqw;height:1.2cqw;border-radius:50%;background:var(--gold)}
 .thumb.cover{justify-content:flex-end;padding-bottom:5cqw}
 .thumb.cover .tt{font-size:6.2cqw;line-height:1.04;letter-spacing:-.045em}
 .thumb.cover ul{gap:.8cqw}
@@ -131,19 +131,19 @@ td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
 .detail h5{font-size:14px;letter-spacing:-.005em;color:var(--muted);margin:0 0 6px}
 .detail p{max-width:none}
 .detail .blk{margin-bottom:20px}
-.demo-box{margin:6px 0 18px;padding:16px 18px;border-radius:11px;border:1px solid #c6e59a;background:color-mix(in srgb,var(--lime) 34%,var(--surface))}
-.demo-box h5{color:var(--forest)}
+.demo-box{margin:6px 0 18px;padding:16px 18px;border-radius:11px;border:1px solid var(--demo-line);background:var(--demo-bg)}
+.demo-box h5{color:var(--head)}
 .demo-box ol{margin:0 0 6px;padding-left:1.25em}
 .demo-box li{margin-bottom:.4em}
-.backup{margin:0;padding:12px 16px;border-left:4px solid var(--maroon);background:var(--warn-bg);border-radius:0 9px 9px 0;font-size:14.5px}
+.backup{margin:0;padding:12px 16px;border-left:4px solid var(--alert);background:var(--warn-bg);border-radius:0 9px 9px 0;font-size:14.5px}
 .ref{font-size:14.5px}
 
 .codewrap{position:relative;margin:14px 0}
 .codewrap pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;background:var(--code);color:var(--code-ink);border-radius:11px;padding:46px 22px 22px;font:14.5px/1.75 ui-monospace,SFMono-Regular,Menlo,monospace;box-shadow:0 12px 30px var(--shadow)}
-.codewrap .k{color:var(--mint);font-weight:700}
-.codelabel{position:absolute;left:22px;top:14px;right:120px;font-size:12.5px;font-weight:700;color:#9fc9b8;line-height:1.3}
-.copy{position:absolute;top:10px;right:10px;padding:6px 12px;border-radius:7px;border:1px solid #2e5147;background:#1f3a33;color:#e9fff5;font:700 12.5px/1.2 inherit;font-family:inherit;cursor:pointer}
-.copy:hover{background:#28483f}
+.codewrap .k{color:var(--tint);font-weight:700}
+.codelabel{position:absolute;left:22px;top:14px;right:120px;font-size:12.5px;font-weight:700;color:#a9b4e6;line-height:1.3}
+.copy{position:absolute;top:10px;right:10px;padding:6px 12px;border-radius:7px;border:1px solid #37447f;background:#222c63;color:#f0f3ff;font:700 12.5px/1.2 inherit;font-family:inherit;cursor:pointer}
+.copy:hover{background:#2b3778}
 
 .mod .detail{max-width:none}
 .mod .demo-box li{max-width:none}
@@ -224,7 +224,7 @@ td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
     <h1>Jadikan AI pembantu anda, bukan pengganti anda.</h1>
     <p class="lead">Bahan lengkap webinar 90 minit pada 22 September 2026: 9 slaid pembuka, sepuluh modul demo langsung merentasi Claude, ChatGPT dan Gemini, dua belas prompt siap salin, skrip, soalan Q&amp;A dan senarai semak persediaan.</p>
     <div class="hero-actions">
-      <a class="btn-lime" href="#demo">Lihat aturcara demo <span aria-hidden="true">↓</span></a>
+      <a class="btn-gold" href="#demo">Lihat aturcara demo <span aria-hidden="true">↓</span></a>
       <a class="btn-link" href="#persediaan">Senarai semak persediaan</a>
     </div>
   </div>
@@ -380,11 +380,11 @@ td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
 
     <section id="reka">
       <h2>10. Garis reka bentuk slaid</h2>
-      <p>Garis ini akan digunakan apabila slaid ditukar kepada fail .pptx. Warna dan tipografi mengikut reka bentuk panduan web peribadi supaya bahan konsisten.</p>
+      <p>Garis ini akan digunakan apabila slaid ditukar kepada fail .pptx. Palet warna sengaja dibezakan daripada laman panduan web peribadi (biru malam dan emas, bukan hijau) supaya kedua-dua bahan mudah dikenali.</p>
       <div class="swatches" id="swatches"></div>
       <ul>
         <li>Saiz 16:9. Tajuk 40 pt tebal, poin 28 pt, label dan nota kaki tidak kurang 24 pt.</li>
-        <li>Latar hijau tua, teks putih, penanda lime. Maroon hanya untuk amaran dan risiko.</li>
+        <li>Latar biru malam, teks putih, penanda emas. Merah hanya untuk amaran dan risiko.</li>
         <li>Satu keluarga fon sahaja: Avenir Next atau Segoe UI, dengan Arial sebagai ganti.</li>
         <li>Satu mesej bagi satu slaid, maksimum empat poin, setiap poin kurang 12 perkataan.</li>
         <li>Tiada animasi. Semasa demo, besarkan fon pelayar dan terminal supaya boleh dibaca pada skrin kecil.</li>
@@ -419,7 +419,7 @@ const SLIDES = [
       "Prof. Madya Dr. Mohd Murtadha bin Mohamad",
       "Jabatan Sains Komputer, Fakulti Komputeran, UTM"
     ],
-    vis: "Latar hijau tua penuh. Logo penganjur di penjuru atas (guna logo rasmi yang dibekalkan IPF). Tajuk besar putih di kiri, satu ikon pembantu ringkas di kanan. Tiada foto.",
+    vis: "Latar biru malam penuh. Logo penganjur di penjuru atas (guna logo rasmi yang dibekalkan IPF). Tajuk besar putih di kiri, satu ikon pembantu ringkas di kanan. Tiada foto.",
     note: "Assalamualaikum dan selamat malam semua. Terima kasih kerana hadir selepas seharian bekerja. Saya Murtadha dari Jabatan Sains Komputer. Tajuk malam ini: Jadikan AI Pembantu Anda. Perhatikan perkataannya, pembantu, bukan pengganti. Sesi ini agak berbeza. Saya hanya menggunakan kira-kira empat belas minit pertama untuk slaid, kemudian saya terus menunjukkan secara langsung: tiga alat sembang, tiga ruang kerja ejen dan dua alat pengekodan. Semua data dalam demo ialah rekaan. Kadangkala hasilnya berbeza atau demo gagal, dan itu pun sebahagian daripada pelajaran. Anda boleh menaip soalan dalam chat pada bila-bila masa. Baik, kita mulakan dengan peta malam ini.",
     backup: null
   },
@@ -445,7 +445,7 @@ const SLIDES = [
       "Nilainya bergantung pada arahan dan semakan",
       "Anda kekal bertanggungjawab ke atas hasil"
     ],
-    vis: "Dua kotak besar bersebelahan: kiri bertanda Draf daripada AI (hijau), kanan bertanda Keputusan daripada anda (maroon). Satu anak panah pendek di antara kedua-duanya.",
+    vis: "Dua kotak besar bersebelahan: kiri bertanda Draf daripada AI (biru muda), kanan bertanda Keputusan daripada anda (emas). Satu anak panah pendek di antara kedua-duanya.",
     note: "Mesej teras malam ini ringkas: AI ialah pembantu yang pantas, tetapi tidak boleh dipercayai sepenuhnya. Ia boleh menulis draf, merangka rubrik dan meringkaskan dokumen dalam beberapa saat. Namun ia juga boleh menulis dengan yakin sambil tersilap, termasuk mereka rujukan yang tidak wujud. Sebab itu saya sebut: draf daripada AI, keputusan daripada anda. Kualiti hasil bergantung pada tiga perkara yang kita kawal: cara kita mengarah, cara kita menyemak, dan data yang kita berikan. Sepanjang malam ini, setiap demo akan menunjukkan ketiga-tiganya. Jika anda hanya ingat satu ayat, ingatlah bahawa anda kekal bertanggungjawab ke atas apa yang anda hantar atau terbitkan.",
     backup: null
   },
@@ -484,7 +484,7 @@ const SLIDES = [
       "Jangan dedahkan kata laluan atau kunci API",
       "Rujuk [semak garis panduan UTM terkini]"
     ],
-    vis: "Tiga ikon mangga besar dengan satu ayat pendek di bawah setiap satu. Poin keempat dalam jalur maroon nipis di bahagian bawah.",
+    vis: "Tiga ikon mangga besar dengan satu ayat pendek di bawah setiap satu. Poin keempat dalam jalur merah nipis di bahagian bawah.",
     note: "Sebelum kita menaip apa-apa, tiga peraturan data. Jangan tampal data peribadi pelajar atau staf, seperti nama berserta markah. Jangan muat naik dokumen sulit, termasuk manuskrip yang diserahkan kepada anda untuk semakan sulit. Jangan dedahkan kata laluan atau kunci API. Akta Perlindungan Data Peribadi 2010 berkaitan, tetapi butirannya PERLU SEMAK, dan garis panduan UTM tentang penggunaan AI ialah rujukan anda: [semak garis panduan UTM terkini]. Sebab itu semua demo malam ini menggunakan data rekaan. Apabila kita masuk ke ejen yang boleh membaca fail, peraturan ini menjadi lebih penting, bukan kurang.",
     backup: null
   },
@@ -497,7 +497,7 @@ const SLIDES = [
       "Semak setiap fail yang dihasilkan atau diubah",
       "Tahu cara menghentikannya dan kekalkan salinan asal"
     ],
-    vis: "Satu ikon folder di kiri dengan bingkai putus-putus hijau (sempadan akses). Di kanan, ikon ejen dengan satu tanda semak maroon bertanda Kelulusan anda.",
+    vis: "Satu ikon folder di kiri dengan bingkai putus-putus emas (sempadan akses). Di kanan, ikon ejen dengan satu tanda semak merah bertanda Kelulusan anda.",
     note: "Alat ejen berbeza daripada sembang kerana ia boleh bertindak: membaca folder, mencipta fail, malah menjalankan kod. Itu menjimatkan masa, tetapi juga menambah risiko. Amalan saya ada empat. Pertama, beri akses hanya kepada folder rekaan atau folder yang anda dibenarkan. Kedua, baca rancangan dan langkah yang dicadangkan sebelum meluluskan. Ketiga, semak setiap fail yang dihasilkan atau diubah. Keempat, tahu cara menghentikannya dan simpan salinan asal. Kawalan kelulusan sebenar berbeza mengikut alat, jadi kita akan lihat sendiri dalam demo dan saya tandakan PERLU SEMAK. Ejen ialah pembantu yang bekerja pantas, bukan pekerja yang boleh dibiarkan tanpa pengawasan.",
     backup: null
   },
@@ -536,7 +536,7 @@ const SLIDES = [
       "Lindungi data dan rujuk garis panduan UTM",
       "Bahan webinar dikongsi dalam chat"
     ],
-    vis: "Latar hijau tua. Tiga nombor besar (1, 2, 3) dengan satu ayat di sebelah setiap satu. Pautan bahan dalam kotak lime di bawah. Ucapan terima kasih kecil untuk IPF.",
+    vis: "Latar biru malam. Tiga nombor besar (1, 2, 3) dengan satu ayat di sebelah setiap satu. Pautan bahan dalam kotak emas di bawah. Ucapan terima kasih kecil untuk IPF.",
     note: "Kita hampir habis. Tiga langkah selepas malam ini. Pertama, pilih satu tugasan kecil yang berulang dalam kerja anda, contohnya e-mel rutin atau minit mesyuarat. Kedua, tulis arahan lima elemen, jalankan, semak hasilnya dan baiki arahan. Ketiga, lindungi data dan rujuk garis panduan UTM yang terkini. Jangan cuba mempelajari semua alat sekaligus. Mulakan dengan sembang, kemudian cuba ruang kerja ejen apabila anda selesa, dan pertimbangkan alat pengekodan hanya jika ia sesuai dengan kerja anda. Bahan webinar dan prompt dikongsi dalam chat. Terima kasih kepada IPF dan semua yang hadir. Ingat: AI membantu, anda yang memutuskan.",
     backup: null
   }
@@ -1015,8 +1015,8 @@ const SEMAK = [
 
   /* ---- Timeline ---- */
   var segColors = {
-    s0: ["#b8ead7", "#0e2e28"], s1: ["#2f7d63", "#ffffff"], s2: ["#1d563d", "#ffffff"],
-    s3: ["#153b34", "#ffffff"], s4: ["#ddf3b9", "#0e2e28"]
+    s0: ["#cfd8ff", "#0d1636"], s1: ["#3b5bdb", "#ffffff"], s2: ["#2b3f9e", "#ffffff"],
+    s3: ["#14204d", "#ffffff"], s4: ["#ffd166", "#0d1636"]
   };
   function firstTarget(g) {
     var m = MODULES.filter(function (x) { return x.seg === g.id; })[0];
@@ -1196,10 +1196,10 @@ const SEMAK = [
 
   /* ---- Swatches ---- */
   $("#swatches").innerHTML = [
-    ["Forest", "#153b34", "Latar slaid"], ["Forest gelap", "#0e2e28", "Latar kedua"],
-    ["Mint", "#b8ead7", "Aksen lembut"], ["Lime", "#ddf3b9", "Penanda dan tanda demo"],
-    ["Maroon", "#8f163f", "Amaran dan risiko"], ["Kertas", "#f8faf7", "Latar dokumen"],
-    ["Tinta", "#172b27", "Teks pada latar cerah"]
+    ["Biru malam", "#14204d", "Latar slaid"], ["Biru gelap", "#0d1636", "Latar kedua"],
+    ["Biru muda", "#cfd8ff", "Aksen lembut"], ["Emas", "#ffd166", "Penanda dan tanda demo"],
+    ["Merah", "#b4233c", "Amaran dan risiko"], ["Kertas", "#f6f7fb", "Latar dokumen"],
+    ["Tinta", "#1b1f3b", "Teks pada latar cerah"]
   ].map(function (c) {
     return '<div class="swatch"><i style="background:' + c[1] + '"></i><b>' + c[0] + '</b><span>' + c[1] + '</span><span style="font-family:inherit;padding-top:0">' + c[2] + '</span></div>';
   }).join("");

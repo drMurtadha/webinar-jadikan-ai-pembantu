@@ -97,7 +97,7 @@ Sepuluh slaid sahaja: sembilan pada 14 minit pertama dan satu untuk penutup. Mak
 - Prof. Madya Dr. Mohd Murtadha bin Mohamad
 - Jabatan Sains Komputer, Fakulti Komputeran, UTM
 
-**Cadangan visual.** Latar hijau tua penuh. Logo penganjur di penjuru atas (guna logo rasmi yang dibekalkan IPF). Tajuk besar putih di kiri, satu ikon pembantu ringkas di kanan. Tiada foto.
+**Cadangan visual.** Latar biru malam penuh. Logo penganjur di penjuru atas (guna logo rasmi yang dibekalkan IPF). Tajuk besar putih di kiri, satu ikon pembantu ringkas di kanan. Tiada foto.
 
 **Nota pembentang** (95 perkataan).
 
@@ -133,7 +133,7 @@ Malam ini kita bergerak dalam lima langkah. Empat belas minit pertama ialah slai
 - Nilainya bergantung pada arahan dan semakan
 - Anda kekal bertanggungjawab ke atas hasil
 
-**Cadangan visual.** Dua kotak besar bersebelahan: kiri bertanda Draf daripada AI (hijau), kanan bertanda Keputusan daripada anda (maroon). Satu anak panah pendek di antara kedua-duanya.
+**Cadangan visual.** Dua kotak besar bersebelahan: kiri bertanda Draf daripada AI (biru muda), kanan bertanda Keputusan daripada anda (emas). Satu anak panah pendek di antara kedua-duanya.
 
 **Nota pembentang** (99 perkataan).
 
@@ -187,7 +187,7 @@ Satu kemahiran yang boleh dibawa ke semua alat ialah menulis arahan dengan lima 
 - Jangan dedahkan kata laluan atau kunci API
 - Rujuk [semak garis panduan UTM terkini]
 
-**Cadangan visual.** Tiga ikon mangga besar dengan satu ayat pendek di bawah setiap satu. Poin keempat dalam jalur maroon nipis di bahagian bawah.
+**Cadangan visual.** Tiga ikon mangga besar dengan satu ayat pendek di bawah setiap satu. Poin keempat dalam jalur merah nipis di bahagian bawah.
 
 **Nota pembentang** (89 perkataan).
 
@@ -205,7 +205,7 @@ Sebelum kita menaip apa-apa, tiga peraturan data. Jangan tampal data peribadi pe
 - Semak setiap fail yang dihasilkan atau diubah
 - Tahu cara menghentikannya dan kekalkan salinan asal
 
-**Cadangan visual.** Satu ikon folder di kiri dengan bingkai putus-putus hijau (sempadan akses). Di kanan, ikon ejen dengan satu tanda semak maroon bertanda Kelulusan anda.
+**Cadangan visual.** Satu ikon folder di kiri dengan bingkai putus-putus emas (sempadan akses). Di kanan, ikon ejen dengan satu tanda semak merah bertanda Kelulusan anda.
 
 **Nota pembentang** (95 perkataan).
 
@@ -260,7 +260,7 @@ Beberapa perkara tentang cara demo berjalan. Semua data ialah rekaan atau awam. 
 - Lindungi data dan rujuk garis panduan UTM
 - Bahan webinar dikongsi dalam chat
 
-**Cadangan visual.** Latar hijau tua. Tiga nombor besar (1, 2, 3) dengan satu ayat di sebelah setiap satu. Pautan bahan dalam kotak lime di bawah. Ucapan terima kasih kecil untuk IPF.
+**Cadangan visual.** Latar biru malam. Tiga nombor besar (1, 2, 3) dengan satu ayat di sebelah setiap satu. Pautan bahan dalam kotak emas di bawah. Ucapan terima kasih kecil untuk IPF.
 
 **Nota pembentang** (94 perkataan).
 
@@ -981,17 +981,13 @@ Bahan ini tidak mengandungi statistik, kajian, nama ciri produk, had penggunaan,
 
 | Nama | Kod | Kegunaan |
 |---|---|---|
-| Forest | `#153b34` | Latar slaid |
-| Forest gelap | `#0e2e28` | Latar kedua |
-| Mint | `#b8ead7` | Aksen lembut |
-| Lime | `#ddf3b9` | Penanda dan tanda demo |
-| Maroon | `#8f163f` | Amaran dan risiko |
-| Kertas | `#f8faf7` | Latar dokumen |
-| Tinta | `#172b27` | Teks pada latar cerah |
+| Biru malam | `#14204d` | Latar slaid |
+| Biru gelap | `#0d1636` | Latar kedua |
+| Biru muda | `#cfd8ff` | Aksen lembut |
+| Emas | `#ffd166` | Penanda dan tanda demo |
+| Merah | `#b4233c` | Amaran dan risiko |
+| Kertas | `#f6f7fb` | Latar dokumen |
+| Tinta | `#1b1f3b` | Teks pada latar cerah |
 
-- Saiz 16:9. Tajuk 40 pt tebal, poin 28 pt, label dan nota kaki tidak kurang 24 pt.
-- Latar hijau tua, teks putih, penanda lime. Maroon hanya untuk amaran dan risiko.
-- Satu keluarga fon sahaja: Avenir Next atau Segoe UI, dengan Arial sebagai ganti.
-- Satu mesej bagi satu slaid, maksimum empat poin, setiap poin kurang 12 perkataan.
-- Tiada animasi. Semasa demo, besarkan fon pelayar dan terminal supaya boleh dibaca pada skrin kecil.
-- Slaid sandaran diberi huruf B dan nombor modul (B1 hingga B10) dan ditetapkan sebagai tersembunyi.
+Palet sengaja dibezakan daripada laman panduan web peribadi (hijau) supaya kedua-dua bahan mudah dikenali.
+
