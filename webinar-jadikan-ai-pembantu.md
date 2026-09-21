@@ -991,3 +991,5 @@ Bahan ini tidak mengandungi statistik, kajian, nama ciri produk, had penggunaan,
 
 Palet sengaja dibezakan daripada laman panduan web peribadi (hijau) supaya kedua-dua bahan mudah dikenali.
 
+Halaman interaktif menyediakan tiga palet (Biru malam sebagai lalai, Hijau hutan, Teal dan koral) dan mod Auto, Cerah, Gelap yang boleh dipilih pengguna. Fail .pptx menggunakan palet lalai.
+
