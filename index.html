@@ -231,6 +231,12 @@ td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
 .detail h5{font-size:14px;letter-spacing:-.005em;color:var(--muted);margin:0 0 6px}
 .detail p{max-width:none}
 .detail .blk{margin-bottom:20px}
+.detail .notes{margin-bottom:0}
+.detail .notes summary{cursor:pointer;font-size:14px;letter-spacing:-.005em;color:var(--muted);font-weight:700;list-style:none;display:flex;align-items:center;gap:8px}
+.detail .notes summary::-webkit-details-marker{display:none}
+.detail .notes summary::after{content:"+";font-weight:800;color:var(--accent);font-size:15px;line-height:1}
+.detail .notes[open] summary::after{content:"\2212"}
+.detail .notes p{margin:10px 0 0}
 .demo-box{margin:6px 0 18px;padding:16px 18px;border-radius:11px;border:1px solid var(--demo-line);background:var(--demo-bg)}
 .demo-box h5{color:var(--head)}
 .demo-box ol{margin:0 0 6px;padding-left:1.25em}
@@ -1205,7 +1211,7 @@ const SEMAK = [
         (s.tag ? '<span class="chip demo">' + s.tag + '</span>' : "") +
         '<span class="wc">Nota: ' + words(s.note) + ' perkataan</span></div>';
       var d = '<div class="blk"><h5>Cadangan visual</h5><p>' + esc(s.vis) + '</p></div>' +
-        '<div class="blk"><h5>Nota pembentang</h5><p>' + esc(s.note) + '</p></div>';
+        '<details class="notes"><summary>Nota pembentang</summary><p>' + esc(s.note) + '</p></details>';
       return '<article class="slide" id="slaid-' + s.n + '">' +
         '<div class="slide-head"><span class="sn">' + s.n + '</span><h4>' + esc(s.t) + '</h4></div>' + meta +
         '<div class="slide-grid"><div class="thumb-col">' + thumb + '</div><div class="detail">' + d + '</div></div></article>';
